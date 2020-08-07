@@ -82,3 +82,27 @@
 // *******************************************
 // *** String Metheds In JS ***
 // *******************************************
+var name = "simon chowdery";
+
+// @length property => returns the length of a string:
+// name.length // return 5;
+
+// @indexOf => Returns the position of the first occurrence of a substring,
+// @Pram = Specified letter
+// and return -1 if the text is not found
+// name.indexOf('m') // returm 2
+
+// @slice() => extracts a part of a string and returns the extracted part in a new string.
+// @Pram1 = start
+// @Pram2 = end
+// name.slice(0, 8) // return simon ch
+
+// @substring() => Returns the substring at the specified location within a String object.
+// @Pram1 = start
+// @Pram2 = end
+// name.substring(0, 3) // return sim
+
+// @substr() => Gets a substring beginning at the specified location and having the specified length.
+// @Pram1 = from
+// @Pram2 = length
+// console.log(name.substr(2, 4)); return mon
