@@ -105,4 +105,9 @@ var name = "simon chowdery";
 // @substr() => Gets a substring beginning at the specified location and having the specified length.
 // @Pram1 = from
 // @Pram2 = length
-// console.log(name.substr(2, 4)); return mon
+// name.substr(2, 4); return mon
+
+// @replace() => Replaces text in a string, using a regular expression or search string.
+// @Pram1 = searchValue: string | RegExp
+// @Pram2 = replaceValue: string
+// name.replace("chowdery", "Sorkar") // return Simon Sorkar
