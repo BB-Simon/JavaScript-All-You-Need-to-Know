@@ -88,26 +88,52 @@ var name = "simon chowdery";
 // name.length // return 5;
 
 // @indexOf => Returns the position of the first occurrence of a substring,
-// @Pram = Specified letter
+// @Param = Specified letter
 // and return -1 if the text is not found
 // name.indexOf('m') // returm 2
 
 // @slice() => extracts a part of a string and returns the extracted part in a new string.
-// @Pram1 = start
-// @Pram2 = end
+// @Param1 = start
+// @Param2 = end
 // name.slice(0, 8) // return simon ch
 
 // @substring() => Returns the substring at the specified location within a String object.
-// @Pram1 = start
-// @Pram2 = end
+// @Param1 = start
+// @Param2 = end
 // name.substring(0, 3) // return sim
 
 // @substr() => Gets a substring beginning at the specified location and having the specified length.
-// @Pram1 = from
-// @Pram2 = length
+// @Param1 = from
+// @Param2 = length
 // name.substr(2, 4); return mon
 
 // @replace() => Replaces text in a string, using a regular expression or search string.
-// @Pram1 = searchValue: string | RegExp
-// @Pram2 = replaceValue: string
+// @Param1 = searchValue: string | RegExp
+// @Param2 = replaceValue: string
 // name.replace("chowdery", "Sorkar") // return Simon Sorkar
+
+// @toUpperCase() => Converts all the alphabetic characters in a string to uppercase.
+// name.toUpperCase()
+
+// toLowerCase() => Converts all the alphabetic characters in a string to lowercase.
+// name.toLowerCase()
+
+// @concat() => joins two or more strings:
+// var fName = "simon";
+// var lName = "Chowdery";
+// fName.concat(lName)
+
+// @trim() => Removes the leading and trailing white space and line terminator characters from a string.
+// var str = "          hello    world           "
+// str.trim();
+
+// @charAt() => Returns the character at the specified index
+// name.charAt(2);
+
+// @split() => Split a string into substrings using the specified separator and return them as an array.
+// @Param1 => separator: string | RegExp
+// @Param2 => limit?: number
+// name.split("", 4);
+
+// @ [] => Property Accessor
+// name[3]
