@@ -176,4 +176,27 @@
 // **************************************************
 // ************* Number Methods In JS ***************
 // **************************************************
+// var x = 9.656;
+// var y = 20;
 
+// @toString() => method returns a number as a string
+// x.toString()
+
+// @toFixed() => Returns a string representing a number in fixed-point notation.
+// @param fractionDigits => Number of digits after the decimal point. Must be in the range 0 - 20, inclusive.
+// x.toFixed(0); // returns 10
+// x.toFixed(2); // returns 9.66
+// x.toFixed(4); // returns 9.6560
+// x.toFixed(6); // returns 9.656000
+
+// @valueOf() => Returns the primitive value of the specified object.
+// x.valueOf(); // returns 9.656
+
+// @parseInt() => Converts a string to an integer.
+// @param s => A string to convert into a number.
+// var x = "10"
+// parseInt(x)
+
+// @parseFloat() => Converts a string to a floating-point number.
+// @param string — A string that contains a floating-point number.
+// parseFloat(x)
