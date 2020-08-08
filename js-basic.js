@@ -70,7 +70,7 @@
 // var answer2 = 'It is "alright"'; // Double quotes inside Single quotes
 // var answer1 = "It's alright"; // Escaping with backslash
 // var answer2 = 'It is "alright"'; // Escaping with backslash
-// var name = "simon" + " " + "Chowdery"; // String concatanation
+// var name = "simon" + " " + "Chowdery"; // String concatenation
 // console.log(name);
 
 // Strings Can be Objects
@@ -82,7 +82,7 @@
 // *******************************************
 // *** String Metheds In JS ***
 // *******************************************
-var name = "simon chowdery";
+// var name = "simon chowdery";
 
 // @length property => returns the length of a string:
 // name.length // return 5;
@@ -137,3 +137,43 @@ var name = "simon chowdery";
 
 // @ [] => Property Accessor
 // name[3]
+
+// *******************************************
+// ************* Numbers In JS ***************
+// *******************************************
+// JavaScript has only one type of number. Numbers can be written with or without decimals.
+// var x = 3.14;    // A number with decimals/Floating point number
+// var y = 3;       // A number without decimals/Integer
+
+// JavaScript will try to convert strings to numbers in all numeric operations -except plus(+)-:
+// all bellow are valid
+// var x = "100"
+// var y = "10"
+// console.log(x - y); // output:90
+// console.log(x * y); // output:1000
+// console.log(x / y); // output:10
+// // but
+// console.log(x + y); // output:10010 coz strings are concatenated.
+// var x = 10;
+// var y = 20;
+// var z = "30";
+// console.log(x + y + z); // output: 3030, Here x and y are added as number than that result and string concatenated
+
+// @Division by 0 (zero) also generates Infinity:
+// var x =  2 / 0; // output: Infinity
+// var y = -2 / 0; // output: -Infinity
+// ****@Infinity is a number: typeof Infinity returns number.
+
+// *****************@Numbers Can be Objects*****************
+// var x = 123; // typeof x returns number
+// var y = new Number(123); // typeof y returns object
+// (x == y) is true because x and y have equal values
+// (x === y) is false because x and y have different types
+// var x = new Number(500);
+// var y = new Number(500);
+// (x == y) is false because objects cannot be compared
+
+// **************************************************
+// ************* Number Methods In JS ***************
+// **************************************************
+
