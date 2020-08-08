@@ -242,14 +242,14 @@
 // ************* @Operators In JS ***************
 // *******************************************************
 // @Arithmetic Operators
-// + =>     Addition
-// - =>     Subtraction
-// * =>     Multiplication
-// ** =     Exponentiation
-// / =>     Division
-// % =>     Modolus(Division Remainder)
-// ++ =     Increment
-// -- =     Decrement
+// + =>   Addition
+// - =>   Subtraction
+// * =>   Multiplication
+// ** =   Exponentiation
+// / =>   Division
+// % =>   Modolus(Division Remainder)
+// ++ =   Increment
+// -- =   Decrement
 
 // @Assignment Operators
 //  =     => x = 10
@@ -261,21 +261,87 @@
 // **=    => x = x ** y
 
 // @Comparison Operators
-// ==       => equal to
-// ===      => equal vale & equal type
-// !=       => not equal to
-// !==      => not equal value or not equal type
-// >        => greater than
-// <        => less than
-// >=       => grater than or equal to
-// <=       => less than or equal to
-// ?        => ternary operator
+// ==     => equal to
+// ===    => equal vale & equal type
+// !=     => not equal to
+// !==    => not equal value or not equal type
+// >      => greater than
+// <      => less than
+// >=     => grater than or equal to
+// <=     => less than or equal to
+// ?      => ternary operator
 
 // @Logical Operators
-// &&       => logical and
-// ||       => logical or
-// !        => logical not
+// &&     => logical and
+// ||     => logical or
+// !      => logical not
 
 // @Type Operators
 // typeof => Returns the type of a variable
 // instanceof => Returns true if an object is an instance of an object type
+
+// *******************************************************
+// ************* @Math Object In JS ***************
+// *******************************************************
+
+// @Math.PI => TReturns the ratio of the circumference of a circle to its diameter.
+// Math.PI;
+
+// @Math.pow => Returns the value of a base expression taken to a specified power
+// @param x — The base value of the expression.
+// @param y — The exponent value of the expression
+// var x = 10
+// var y = 5
+// Math.pow(x, y); // (10 * 10 * 10 * 10 * 10) = 100000
+
+// @Math.sqrt() => Returns the square root of a number.
+// @param x — A numeric expression.
+// var x = 25
+// console.log(Math.sqrt(x));
+
+// Math.abs() => returns the absolute (positive) value of x
+// @param x — A numeric expression/;
+// var x = -5
+// Math.abs(x); // output is: 5
+
+// @Math.round() => Returns a supplied numeric expression rounded to the nearest integer
+// @param x — The value to be rounded to the nearest integer.
+// Math.round(4.7);    // returns 5
+// Math.round(4.4);    // returns 4
+
+// @Math.floor() => returns the value rounded down to its nearest integer.
+// @param x — A numeric expression.
+// Math.floor(2.9) // 2;
+
+// @Math.ceil() => returns the value rounded up to its nearest integer.
+// @param x — A numeric expression.
+// Math.ceil(2.1); // 3;
+
+// @Math.random() => Returns a random number between 0 and 1.
+// Math.random()
+
+// Math.random() used with Math.floor() can be used to return random integers.
+// Math.floor(Math.random() * 10); // returns a random integer from 0 to 9
+// Math.floor(Math.random() * 10) + 1;  // returns a random integer from 1 to 10
+
+// *******************************************************
+// ************* @Date Object In JS ***************
+// *******************************************************
+// const date = new Date()
+// console.log(date.toString());
+// console.log(date.toDateString());
+// console.log(date.toTimeString());
+// console.log(date.toLocaleDateString());
+// console.log(date.toLocaleString());
+// console.log(date.toLocaleTimeString());
+
+// console.log(date.getFullYear());
+// console.log(date.getMonth());
+// console.log(date.getDate());
+// console.log(date.getTime());
+
+// console.log(date.getMinutes());
+// console.log(date.getHours());
+// console.log(date.getMilliseconds());
+// console.log(date.getSeconds());
+// console.log(date.getDay());
