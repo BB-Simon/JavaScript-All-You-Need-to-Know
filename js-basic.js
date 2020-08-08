@@ -200,3 +200,82 @@
 // @parseFloat() => Converts a string to a floating-point number.
 // @param string — A string that contains a floating-point number.
 // parseFloat(x)
+
+// @NaN is a JavaScript reserved word indicating that a number is not a legal number.
+// Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+// var x = 100 / "Apple";  // x will be NaN (Not a Number)
+
+// **************************************************
+// ************* @Boolean In JS ***************
+// **************************************************
+// JavaScript has a Boolean data type. It can only take the values true or false.
+// var a = true
+// var b = false
+// var c = Boolean(true)
+//***************@falsy values: "", 0, null, undefined, NaN *****************
+// console.log('');
+// console.log(NaN); // when we don't use Boolean constructor, compiler wil convert it to Boolean automitally
+// console.log(Boolean(''));
+// console.log(Boolean(NaN));
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(0))
+
+// *******************************************************
+// ************* @null vs @undefined In JS ***************
+// *******************************************************
+// @null represents the intentional absence of any object value. It is one of JavaScript's
+// primitive values and is treated as falsy for boolean operations.
+//  variable without a value, has the value @undefined. The type is also @undefined.
+
+// typeof null          // "object" (not "null" for legacy reasons)
+// typeof undefined     // "undefined"
+// null === undefined   // false
+// null  == undefined   // true
+// null === null        // true
+// null == null         // true
+// !null                // true
+// isNaN(1 + null)      // false
+// isNaN(1 + undefined) // true
+
+// *******************************************************
+// ************* @Operators In JS ***************
+// *******************************************************
+// @Arithmetic Operators
+// + =>     Addition
+// - =>     Subtraction
+// * =>     Multiplication
+// ** =     Exponentiation
+// / =>     Division
+// % =>     Modolus(Division Remainder)
+// ++ =     Increment
+// -- =     Decrement
+
+// @Assignment Operators
+//  =     => x = 10
+// +=     => x = x + 10
+// -=     => x = x - y
+// *=     => x = x * y
+// /=     => x = x / y
+// %=     => x = x % y
+// **=    => x = x ** y
+
+// @Comparison Operators
+// ==       => equal to
+// ===      => equal vale & equal type
+// !=       => not equal to
+// !==      => not equal value or not equal type
+// >        => greater than
+// <        => less than
+// >=       => grater than or equal to
+// <=       => less than or equal to
+// ?        => ternary operator
+
+// @Logical Operators
+// &&       => logical and
+// ||       => logical or
+// !        => logical not
+
+// @Type Operators
+// typeof => Returns the type of a variable
+// instanceof => Returns true if an object is an instance of an object type
