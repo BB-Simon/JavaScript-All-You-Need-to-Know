@@ -345,3 +345,104 @@
 // console.log(date.getMilliseconds());
 // console.log(date.getSeconds());
 // console.log(date.getDay());
+
+// *******************************************************
+// ************* @Array In JS ***************
+// *******************************************************
+// *********@Arrays are a special type of objects*********
+// JavaScript arrays are used to store multiple values in a single variable
+// @Array Creation/Syntax: there are tree ways to define an array =>
+// First: var arr = []
+// Second: var arr = Array(1, 2, 3, 4)
+// Third: var arr = new Array()
+// var arr = [1, 2, 3, 4, 5]
+
+// @Accessing Array: remeber array is number based index and object is name bassed index
+// arr[0] // returns 1
+// arr[1] // returns 2
+// arr[arr.length -1]; // the last element, returns 5
+// arr[1] = 12 // modifies the element and returns 12
+
+// @Recognizing an array
+// var a = [];
+// var b = {};
+// typeof a; // returns Object
+// a instanceof Array; // returns true
+// b instanceof Array; // returns false
+// Array.isArray(a) // returns true
+// Array.isArray(b) // returns false
+
+// *******************************************************
+// ************* @Array Methods In JS ***************
+// *******************************************************
+var arr = ["simon", "jimon", 1, 2, true];
+
+// @toString() => converts an array to a string of (comma separated) array values.
+// arr.toString()
+
+// @join() => convert elements of an array separated by the specified separator to string.
+// @param separator — a string specifies separator
+// arr.join("*") // return simon*jimon*1*2*true
+
+// @push() => Appends new elements to an end of array, and returns the new length of the array
+// @param items — New elements of the Array.
+// arr.push(2);
+
+// @pop() => Removes the last element from an array and returns it
+// arr.pop()
+
+// @shift() => Removes the first element from an array and returns it.
+// arr.shift()
+
+// @unshift() => Inserts new elements at the start of an array.
+// @param items — Elements to insert at the start of the Array.
+// arr[0]; // returns simon
+// arr.unshift("Jonh")
+// arr[0]; // returns jonh
+
+// @splice() => Removes elements from an array and, if necessary, inserts new elements in their place,
+//              returning the deleted elements.
+// @param1 start — The zero-based location in the array from which to start removing elements.
+// @param2? deleteCount — The number of elements to remove.
+// @param3? items — Elements to insert into the array in place of the deleted elements.
+// arr.splice(2, 1, "Takmina")
+
+// @concat() => Combines two or more arrays and returns a new array.
+// @param items — Additional items to add to the end of array1.
+// var arr2 = [6, , 7, 8];
+// var arr3 = [9, , 10, 11];
+// var arr4 = arr.concat(arr2, arr3, "Souvo");
+// console.log(arr4); // output: [ 'simon', 'jimon', 1, 2, true, 6, , 7, 8, 9, , 10, 11, 'Souvo' ]
+
+// @slice() => slices out a piece of an array into a new array.
+// @param start — The beginning of the specified portion of the array.
+// @param end — The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+// var slicedArr = arr.slice(2, 4);
+// console.log(slicedArr); // output: [1, 2]
+
+// @entries() => Returns an iterable of key, value pairs for every entry in the array
+// for (x of arr.entries()) {
+//   console.log(x); // output: [ 0, 'simon' ] [ 1, 'jimon' ][2, 1][3, 2][4, true]
+// }
+
+// @every() => Determines whether all the members of an array satisfy the specified test and returns boolean
+// var ages = [18, 55, 54, 32, 32, 22];
+// var checkAge =  ages.every(age =>(
+//     age >=18
+// ))
+// if(checkAge){
+//     console.log("all are qualified");
+// } else {
+//     console.log("Opps! there is someone not adult");
+// }
+
+// @find() => Returns the value of the first element in the array where predicate is true, and undefined otherwise.
+// var getFirstElement = ages.find((age) => age >= 18);
+// console.log(getFirstElement) // output: 18
+
+// @some() => Checks if any of the elements in an array pass a test and returns boolean
+// var ages = [2, , 3, 4, 6, 7, 18];
+// var checkAny = ages.some((age) => age >= 18);
+// console.log(checkAny);
+
+
