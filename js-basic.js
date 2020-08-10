@@ -445,4 +445,51 @@ var arr = ["simon", "jimon", 1, 2, true];
 // var checkAny = ages.some((age) => age >= 18);
 // console.log(checkAny);
 
+// @findIndex() => Returns the index of the first element in the array where predicate is true, and -1 otherwise.
+// var ages = [2, 3, 4, 6, 7, 18];
+// var indexNum = ages.findIndex((age) => age >= 5);
+// console.log(indexNum);
 
+// @indexOf() => Returns the index of the first occurrence of a value in an array.
+// @param1 searchElement - The item to search for
+// @param2? fromIndex — The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
+// arr.indexOf("jimon");
+// arr.indexOf("jimon", 1);
+
+// @keys() => returns an Array Iterator object with the keys of an array.
+// var myKeys = arr.keys();
+// for(key of myKeys){
+//     console.log(key);
+// }
+
+// @values() => Returns an iterable of values in the array
+// var myValues = arr.values()
+// for(value of myValues){
+//     console.log(value);
+// }
+
+// @Array.from() => Creates an array from an iterable object.
+// @param iterable — An iterable object to convert to an array.
+// var arr2 = Array.from("simon")
+// console.log(arr2);
+
+// @includes() => Determines whether an array includes a certain element, returning true or false as appropriate.
+// arr.includes("jimon")
+
+// @filter() => Returns the elements of an array that meet the condition specified in a callback function.
+// var filteredArray = arr.filter(item => item !== "jimon")
+// console.log(filteredArray); // output: [ 'simon', 1, 2, true ]
+
+
+// @reduce() => Calls the specified callback function for all the elements in an array.
+//              The return value of the callback function is the accumulated result
+// var numbers = [1, 2, 3, 4, 5, 6]
+// var sum = numbers.reduce((a, b, index)=> {
+//     return a + b
+// }, 4)
+// console.log(sum);
+
+// num = [100, 21, 3, 45, 8, 90, 6, -12, -20, 1]
+// num.sort();
+// num.reverse()
+// console.log(num);
