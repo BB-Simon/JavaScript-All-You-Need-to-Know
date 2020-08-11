@@ -375,7 +375,7 @@
 // *******************************************************
 // ************* @Array Methods In JS ***************
 // *******************************************************
-var arr = ["simon", "jimon", 1, 2, true];
+// var arr = ["simon", "jimon", 1, 2, true];
 
 // @toString() => converts an array to a string of (comma separated) array values.
 // arr.toString()
@@ -425,6 +425,85 @@ var arr = ["simon", "jimon", 1, 2, true];
 //   console.log(x); // output: [ 0, 'simon' ] [ 1, 'jimon' ][2, 1][3, 2][4, true]
 // }
 
+// @keys() => returns an Array Iterator object with the keys of an array.
+// var myKeys = arr.keys();
+// for(key of myKeys){
+//     console.log(key);
+// }
+
+// @values() => Returns an iterable of values in the array
+// var myValues = arr.values()
+// for(value of myValues){
+//     console.log(value);
+// }
+
+// @Array.from() => Creates an array from an iterable object.
+// @param iterable — An iterable object to convert to an array.
+// var arr2 = Array.from("simon")
+// console.log(arr2);
+
+// @includes() => Determines whether an array includes a certain element, returning true or false as appropriate.
+// arr.includes("jimon")
+
+// num = [100, 21, 3, 45, 8, 90, 6, -12, -20, 1]
+// num.sort();
+// num.reverse()
+// console.log(num);
+
+// *******************************************************
+// ************* @Array traversing In JS ***************
+// *******************************************************
+var numbers = [1, 2, 3, 4, 5, 6];
+// var str = ""
+// for(var i = 0; i < numbers.length; i++){
+//     str += numbers[i]
+// }
+// console.log(str);
+
+// var num = []
+// for(var i = 0; i < numbers.length; i++){
+//     num.push(numbers[i])
+// }
+// console.log(num);
+
+// var arr = [
+//   [1, 2, 3, 4, 5],
+//   [6, 7, 8, 9, 10],
+// ];
+
+// for (var i = 0; i < arr.length; i++) {
+//   for (var j = 0; j < arr[i].length; j++) {
+//     console.log("Index: " + i + " = " + arr[i][j]);
+//   }
+// }
+
+// @forEach() => Performs the specified action for each element in an array.
+// @param callbackfn — A function that accepts up to three arguments,
+//                     forEach calls the callbackfn function one time for each element in the array.
+// numbers.forEach((value, index, arr) => console.log(value, index, arr))
+// let b = numbers.forEach(value => value)
+// console.log(b);
+
+// @map() => Calls a defined callback function on each element of an array,
+//           and returns an array that contains the results.
+// @param callbackfn — A function that accepts up to three arguments. The map
+// method calls the callbackfn function one time for each element in the array
+// numbers.map((value, index, arr) => console.log(value, index, arr))
+// let a = numbers.map((value) => value);
+// console.log(a);
+
+// @filter() => Returns the elements of an array that meet the condition specified in a callback function.
+// var filteredArray = arr.filter(item => item !== "jimon")
+// console.log(filteredArray); // output: [ 'simon', 1, 2, true ]
+
+// @reduce() => Calls the specified callback function for all the elements in an array.
+//              The return value of the callback function is the accumulated result
+// var numbers = [1, 2, 3, 4, 5, 6]
+// var sum = numbers.reduce((a, b, index)=> {
+//     return a + b
+// }, 4)
+// console.log(sum);
+
 // @every() => Determines whether all the members of an array satisfy the specified test and returns boolean
 // var ages = [18, 55, 54, 32, 32, 22];
 // var checkAge =  ages.every(age =>(
@@ -455,41 +534,3 @@ var arr = ["simon", "jimon", 1, 2, true];
 // @param2? fromIndex — The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
 // arr.indexOf("jimon");
 // arr.indexOf("jimon", 1);
-
-// @keys() => returns an Array Iterator object with the keys of an array.
-// var myKeys = arr.keys();
-// for(key of myKeys){
-//     console.log(key);
-// }
-
-// @values() => Returns an iterable of values in the array
-// var myValues = arr.values()
-// for(value of myValues){
-//     console.log(value);
-// }
-
-// @Array.from() => Creates an array from an iterable object.
-// @param iterable — An iterable object to convert to an array.
-// var arr2 = Array.from("simon")
-// console.log(arr2);
-
-// @includes() => Determines whether an array includes a certain element, returning true or false as appropriate.
-// arr.includes("jimon")
-
-// @filter() => Returns the elements of an array that meet the condition specified in a callback function.
-// var filteredArray = arr.filter(item => item !== "jimon")
-// console.log(filteredArray); // output: [ 'simon', 1, 2, true ]
-
-
-// @reduce() => Calls the specified callback function for all the elements in an array.
-//              The return value of the callback function is the accumulated result
-// var numbers = [1, 2, 3, 4, 5, 6]
-// var sum = numbers.reduce((a, b, index)=> {
-//     return a + b
-// }, 4)
-// console.log(sum);
-
-// num = [100, 21, 3, 45, 8, 90, 6, -12, -20, 1]
-// num.sort();
-// num.reverse()
-// console.log(num);
