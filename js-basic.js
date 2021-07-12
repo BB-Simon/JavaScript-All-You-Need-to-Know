@@ -324,6 +324,12 @@
 // Math.floor(Math.random() * 10); // returns a random integer from 0 to 9
 // Math.floor(Math.random() * 10) + 1;  // returns a random integer from 1 to 10
 
+// function randomRange(myMin, myMax) {
+//   console.log("minmax", myMax - myMin + 1);
+//   console.log(Math.floor(Math.random() * (myMax - myMin + 1)) + myMin);
+//   return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+// }
+// randomRange(1, 500)
 // *******************************************************
 // ************* @Date Object In JS ***************
 // *******************************************************
@@ -578,6 +584,49 @@ var numbers = [1, 2, 3, 4, 5, 6];
 // }
 
 // updateRecords(recordCollection, 2548, "artist", "");
+
+// Setup
+// var contacts = [
+//   {
+//     firstName: "Akira",
+//     lastName: "Laine",
+//     number: "0543236543",
+//     likes: ["Pizza", "Coding", "Brownie Points"],
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//   },
+//   {
+//     firstName: "Sherlock",
+//     lastName: "Holmes",
+//     number: "0487345643",
+//     likes: ["Intriguing Cases", "Violin"],
+//   },
+//   {
+//     firstName: "Kristian",
+//     lastName: "Vos",
+//     number: "unknown",
+//     likes: ["JavaScript", "Gaming", "Foxes"],
+//   },
+// ];
+
+// function lookUpProfile(name, prop) {
+//   for (var i = 0; i < contacts.length; i++) {
+//     if (contacts[i].firstName === name) {
+//       if (prop in contacts[i]) {
+//         return contacts[i][prop];
+//       } else {
+//         return "No such property";
+//       }
+//     }
+//   }
+//   return "No such contact";
+// }
+
+// lookUpProfile("Akira", "likes");
 
 // *******************************************************
 // ************* @Recursion In JS ***************
