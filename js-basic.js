@@ -604,16 +604,95 @@ var numbers = [1, 2, 3, 4, 5, 6];
 // let total = multiply([2, 3, 4, 56], 4);
 // console.log(total);
 
+// count down
+// function countDown(n) {
+//   for (var i = n; i > 0; i--) {
+//     console.log(i);
+//   }
+//   console.log("done");
+// }
+// countDown(3)
 
-// count down numbers
-function countDown(num){
-  let nextNum = num -1;
-  if(nextNum > 0){
-    countDown(nextNum);
-  }
-  console.log(num);
-}
-countDown(3)
+// function countDownRecursive(n){
+//   if(n <= 0){
+//     console.log("done");
+//     return
+//   }
+//   console.log(n);
+//   countDownRecursive(n -1)
+// }
+// countDownRecursive(3)
 
+// Sum Range
+// function sumRange(n) {
+//   let total = 0;
+//   for (var i = n; i > 0; i--) {
+//     console.log(i);
+//     total += i;
+//   }
+//   console.log(total);
+//   return total;
+// }
+// sumRange(3)
 
+// function sumRangeRecursive(n, total = 0){
+//   if(n <= 0){
+//     console.log(total);
+//     return total;
+//   }
+//   console.log("total => ", total);
+//   console.log("n => ", n);
+//   return sumRangeRecursive(n - 1, total + n);
+// }
+//  sumRangeRecursive(3)
 
+//  Multiply an array
+// function multiply(arr, n) {
+//   if (n <= 0) {
+//     return 1;
+//   }
+//   console.log(n);
+//   return multiply(arr, n - 1) * arr[n - 1];
+// }
+// let m = multiply([1, 2, 3], 3);
+// console.log("returned valu", m);
+
+// Actual need for recursive functions
+
+// const parent = {
+//   name: "John",
+//   children: [
+//     {
+//       name: "Doe",
+//       children: [],
+//     },
+//     {
+//       name: "Smith",
+//       children: [
+//         {
+//           name: "kayle",
+//           children: [],
+//         },
+//         {
+//           name: "Shofia",
+//           children: [],
+//         },
+//       ],
+//     },
+//   ],
+// };
+
+// function printChildren(){
+//   ???
+// }
+
+// function printChildrenRecursive(p) {
+//   if (p.children.length === 0) {
+//     return;
+//   }
+//   p.children.forEach((child) => {
+//     console.log(child.name);
+//     printChildrenRecursive(child);
+//   });
+// }
+// printChildrenRecursive(parent);
