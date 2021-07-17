@@ -459,7 +459,7 @@
 // *******************************************************
 // ************* @Array traversing In JS ***************
 // *******************************************************
-var numbers = [1, 2, 3, 4, 5, 6];
+// var numbers = [1, 2, 3, 4, 5, 6];
 // var str = ""
 // for(var i = 0; i < numbers.length; i++){
 //     str += numbers[i]
@@ -540,6 +540,35 @@ var numbers = [1, 2, 3, 4, 5, 6];
 // @param2? fromIndex — The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
 // arr.indexOf("jimon");
 // arr.indexOf("jimon", 1);
+
+// *****************Prblem solving with array********************//
+// Task: remove the |3|from all nasted arrays
+function filteredArray(arr, elem) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr = [];
+    // console.log('indexi' ,arr[i]);
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] !== 3) {
+        //   console.log("c", arr[i][j]);
+        newArr.push(2, 3, 4,5);
+      }
+    }
+  }
+  return newArr;
+}
+
+console.log(
+  filteredArray(
+    [
+      [3, 2, 3],
+      [1, 6, 3],
+      [3, 13, 26],
+      [19, 3, 9],
+    ],
+    3
+  )
+);
 
 // *******************************************************
 // ************* @Object In JS ***************
