@@ -543,32 +543,102 @@
 
 // *****************Prblem solving with array********************//
 // Task: remove the |3|from all nasted arrays
-function filteredArray(arr, elem) {
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    newArr = [];
-    // console.log('indexi' ,arr[i]);
-    for (let j = 0; j < arr[i].length; j++) {
-      if (arr[i][j] !== 3) {
-        //   console.log("c", arr[i][j]);
-        newArr.push(2, 3, 4,5);
-      }
-    }
-  }
-  return newArr;
-}
+// function filteredArray(arr, elem) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr = [];
+//     // console.log('indexi' ,arr[i]);
+//     for (let j = 0; j < arr[i].length; j++) {
+//       if (arr[i][j] !== 3) {
+//         //   console.log("c", arr[i][j]);
+//         newArr.push(2, 3, 4,5);
+//       }
+//     }
+//   }
+//   return newArr;
+// }
 
-console.log(
-  filteredArray(
-    [
-      [3, 2, 3],
-      [1, 6, 3],
-      [3, 13, 26],
-      [19, 3, 9],
-    ],
-    3
-  )
-);
+// console.log(
+//   filteredArray(
+//     [
+//       [3, 2, 3],
+//       [1, 6, 3],
+//       [3, 13, 26],
+//       [19, 3, 9],
+//     ],
+//     3
+//   )
+// );
+
+//*****************Factorialize a Number***************** */
+// ***************For example: 5! = 1 * 2 * 3 * 4 * 5 = 120****************
+
+// Recursive solution
+// function factorialize(num) {
+//   if (num <= 1) {
+//     return 1;
+//   } else {
+//     return num * factorialize(num - 1);
+//   }
+// }
+
+// Loop solution
+// function factorialize(num) {
+//   let count = 1;
+//   for(let i = 1; i <= num; i++){
+//     count *=i
+//   }
+//   return count
+// }
+
+// console.log(factorialize(5));
+
+/* *******************Return Largest Numbers in Arrays
+---- Return an array consisting of the largest number 
+---- from each provided sub-array. For simplicity, the provided 
+---- array will contain exactly 4 sub-arrays. */
+
+// First solution
+// function largestOfFour(arr) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr.push(Math.max(...arr[i]));
+//   }
+//   return newArr;
+// }
+
+// Second solution
+//  const largestOfFour = arr => arr.map((item) => Math.max(...item));
+
+// let newArr = largestOfFour([
+//   [4, 5, 1, 3],
+//   [13, 27, 18, 26],
+//   [32, 35, 37, 39],
+//   [1000, 1001, 857, 1],
+// ]);
+// console.log(newArr);
+
+let people = [
+  {name: "Alice", age: 21},
+  {name: "Max", age:20},
+  {name: "Jane", age: 20}
+]
+function groupBy(objectArray, property){
+  let obj = {}
+  let arr = []
+  objectArray.map(item => {
+    if(item.age === property){
+      arr.push(item)
+    }
+    // obj[item[property]] = [item]
+  })
+  console.log(arr);
+  return obj
+}   
+
+let groupedPeople = groupBy(people, 'age')
+console.log(groupedPeople);
+
 
 // *******************************************************
 // ************* @Object In JS ***************
