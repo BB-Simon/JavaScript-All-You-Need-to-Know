@@ -406,9 +406,10 @@
 // arr.unshift("Jonh")
 // arr[0]; // returns jonh
 
-// @splice() => Removes elements from an array and, if necessary, inserts new elements in their place,
-//              returning the deleted elements.
-// @param1 start — The zero-based location in the array from which to start removing elements.
+// @splice() => Removes elements from an array and, if necessary, inserts new 
+//              elements in their place, returning the deleted elements.
+// @param1 start — The zero-based location in the array from which to start 
+//                removing elements.
 // @param2? deleteCount — The number of elements to remove.
 // @param3? items — Elements to insert into the array in place of the deleted elements.
 // arr.splice(2, 1, "Takmina")
@@ -618,27 +619,50 @@
 // ]);
 // console.log(newArr);
 
-let people = [
-  {name: "Alice", age: 21},
-  {name: "Max", age:20},
-  {name: "Jane", age: 20}
-]
-function groupBy(objectArray, property){
-  let obj = {}
-  let arr = []
-  objectArray.map(item => {
-    if(item.age === property){
-      arr.push(item)
-    }
-    // obj[item[property]] = [item]
-  })
-  console.log(arr);
-  return obj
-}   
+// **************Grouping****************
+// result sould be liek that => people = {
+//   20: [
+//     { name: "Max", age: 20 },
+//     { name: "Jane", age: 20 },
+//   ],
+//   21: [{ name: "Alice", age: 21 }],
+// };
 
-let groupedPeople = groupBy(people, 'age')
-console.log(groupedPeople);
+// let people = [
+//   {name: "Alice", age: 21},
+// {name: "Max", age:20},
+// {name: "Jane", age: 20}
+// ]
+// function groupBy(objectArray, property){
+//   let obj = {}
+//   let arr = []
+//   objectArray.map(item => {
+//     if(item.age === property){
+//       arr.push(item)
+//     }
+//     // obj[item[property]] = [item]
+//   })
+//   console.log(arr);
+//   return obj
+// }
 
+// let groupedPeople = groupBy(people, 'age')
+// console.log(groupedPeople);
+
+// ****************Title Case a Sentence**************
+// Return the provided string with the first letter of each word capitalized.
+//  Make sure the rest of the word is in lower case.
+// function titleCase(str) {
+//   let words = str.toLowerCase().split(" ");
+//   for (let i = 0; i < words.length; i++) {
+//     words[i] = words[i].replace(
+//       words[i].charAt(0),
+//       words[i].charAt(0).toUpperCase()
+//     );
+//   }
+//   return words.join(" ");
+// }
+// titleCase("I'm a little tea pot");
 
 // *******************************************************
 // ************* @Object In JS ***************
