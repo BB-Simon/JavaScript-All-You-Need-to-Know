@@ -406,9 +406,9 @@
 // arr.unshift("Jonh")
 // arr[0]; // returns jonh
 
-// @splice() => Removes elements from an array and, if necessary, inserts new 
+// @splice() => Removes elements from an array and, if necessary, inserts new
 //              elements in their place, returning the deleted elements.
-// @param1 start — The zero-based location in the array from which to start 
+// @param1 start — The zero-based location in the array from which to start
 //                removing elements.
 // @param2? deleteCount — The number of elements to remove.
 // @param3? items — Elements to insert into the array in place of the deleted elements.
@@ -628,26 +628,16 @@
 //   21: [{ name: "Alice", age: 21 }],
 // };
 
-// let people = [
-//   {name: "Alice", age: 21},
-// {name: "Max", age:20},
-// {name: "Jane", age: 20}
-// ]
-// function groupBy(objectArray, property){
-//   let obj = {}
-//   let arr = []
-//   objectArray.map(item => {
-//     if(item.age === property){
-//       arr.push(item)
-//     }
-//     // obj[item[property]] = [item]
-//   })
-//   console.log(arr);
-//   return obj
-// }
-
-// let groupedPeople = groupBy(people, 'age')
-// console.log(groupedPeople);
+let people = [
+  { name: "Alice", age: 21 },
+  { name: "Max", age: 20 },
+  { name: "Jane", age: 20 },
+];
+function groupBy(objectArray, property) {
+      
+}
+let groupedPeople = groupBy(people, 'age')
+console.log(groupedPeople);
 
 // ****************Title Case a Sentence**************
 // Return the provided string with the first letter of each word capitalized.
