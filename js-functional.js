@@ -568,8 +568,9 @@
 
 // console.log(JSON.stringify(ratings));
 
-function sayHello(name) {
-  console.log(`Hello ${name}`);
+function checkName(name){
+  if(name === "Simon"){
+    console.log(`Hello ${name}`);
+  }
+  console.log('Hello There!');
 }
-
-sayHello("Simon")
