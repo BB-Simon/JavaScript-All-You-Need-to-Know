@@ -1,5 +1,5 @@
 # Javascript all you need to know about!
-![JS Logo](./js.png, "Logo")
+![JS Logo](./js.png "Logo")
 --- 
 Hello Paragraph
 **Simon**
@@ -11,13 +11,13 @@ _Kabir_
 
 1. List1
   1. sublist
-  2. sublit
+  2. sublist
 2. List2
 3. List3
 
 * List1
   * sublit
-  *sublist
+  * sublist
 * List2
 * List3
 
