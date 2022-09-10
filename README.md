@@ -32,7 +32,7 @@ _Kabir_
 
 ### Code Examples
 
-```
+```javascript
 /**
 @sayHi: do greating to the name will be passed as a arg
 @name: string
