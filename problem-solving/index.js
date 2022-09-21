@@ -86,4 +86,75 @@ function perfectFriend(friends){
         }
     }
 }
+
+/**
+ * Will check is the x number is an even number or odd number
+ * @param number:  the x number to check
+ * @return string: true if the x number is an even number
+ * **/
  
+function isEven(x) {
+    if(x % 2 === 0) {
+        return "even"
+    }
+    return "Odd"
+}
+const checkIsEven = isEven(4);
+
+
+function hurdleRace(k, height) {
+    let maxCount = 0;
+    for (let i = 0; i < height.length; i++) {
+        if (height[i] > k) {
+           let diff = height[i] - k;
+            if (diff > maxCount) {
+                maxCount = diff;
+            }
+
+        }
+    }
+    if (maxCount === 0) {
+        return 0;
+    }
+    return maxCount;
+    
+}
+const height = [1, 6, 3, 5, 2];
+const h = hurdleRace(4, height);
+
+function designerPdfViewer(h, word) {
+    const alpah = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    const widthOfEachChar = 1;
+    const hieghtOfEachChar = [];
+
+    for(let j = 0; j < word.length; j++){
+        hieghtOfEachChar.push(h[alpah.indexOf(word[j])])
+    }
+    const tallestChar = Math.max(...hieghtOfEachChar);
+
+    return tallestChar * widthOfEachChar * word.length;
+    
+}
+const heightOfEachChar = [1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7]
+designerPdfViewer(heightOfEachChar, 'zaba');
+
+function utopianTree(n) {
+    // Write your code here
+    let height = 1;
+    for(let i = 1; i <= n; i++){
+        if(i%2 === 0){
+            height++;
+        } else {
+            height*=2;
+        }
+    }
+    return height
+}
+
+const result = utopianTree(4);
+result
+
+
+
+
+
