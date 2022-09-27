@@ -172,6 +172,22 @@ function angryProfessor(k, a) {
 
 angryProfessor(3, [-1, -3, 4, 2])
 
+function beautifulDays(i, j, k) {
+    // Write your code here
+    let count = 0;
+    for(let day = i; day <= j; day++){
+        const reversedDay = parseInt(day.toString().split("").reverse().join(""))
+        console.log(Math.abs(day - reversedDay));
+        if(Math.abs(day - reversedDay) % k === 0){
+            count++;
+        }
+    }
+    return count;
+}
+
+beautifulDays(20, 23, 6)
+
+
 
 
 
