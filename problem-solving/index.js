@@ -151,8 +151,26 @@ function utopianTree(n) {
     return height
 }
 
-const result = utopianTree(4);
-result
+utopianTree(4);
+
+
+// Angry Professor | Hackerarank
+function angryProfessor(k, a) {
+    // Write your code here
+    let count = 0;
+    for(let i = 0; i < a.length; i++){
+        if(a[i] <= 0){
+            count++;
+        }
+    }
+    if(count >= k){
+        console.log('No');
+    } else {
+        console.log('Yes');
+    }
+}
+
+angryProfessor(3, [-1, -3, 4, 2])
 
 
 
