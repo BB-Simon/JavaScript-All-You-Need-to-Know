@@ -187,6 +187,19 @@ function beautifulDays(i, j, k) {
 
 beautifulDays(20, 23, 6)
 
+function permutationEquation(p) {
+    // Write your code here
+    let arr = []
+    for(let i = 1; i <= p.length; i++){
+        console.log(i);
+        console.log(p[i]);
+        arr.push(p.indexOf(p.indexOf(i)+ 1)+1)
+    }
+    console.log(arr);
+    return arr
+
+}
+permutationEquation([4, 3, 5, 1,2])
 
 
 
