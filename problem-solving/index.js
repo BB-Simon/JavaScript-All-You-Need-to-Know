@@ -202,6 +202,30 @@ function permutationEquation(p) {
 permutationEquation([4, 3, 5, 1,2])
 
 
+function jumpingOnClouds(c, k) {
+    let n = c.length
+    let e = 100;
+    let current_cloud = 0;
+    while (true){
+        current_cloud += k;
+        console.log(current_cloud);
+        if (current_cloud >= n){
+            current_cloud -= n;
+        }
+        console.log(current_cloud);
+        e -= 1;
+        if (c[current_cloud] == 1){
+            e -= 2;
+        }
+        if (current_cloud == 0){
+            console.log(e);
+            break;
+        }
+    }
+    return e
+}
 
 
+var c = [0, 0, 1, 0, 0, 1, 1, 0];
+jumpingOnClouds(c, 2)
 
