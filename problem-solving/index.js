@@ -242,3 +242,34 @@ function findDigits(n) {
 }
 
 findDigits(1012)
+
+function viralAdvertising(n) {
+    // first way
+    let likes = 0
+    let sharing = 0;
+    for(let i = 1; i <=n; i++){
+        if(i === 1){
+            likes += Math.floor(5/2)
+            sharing += Math.floor(5/2)
+        } else {
+            sharing = Math.floor(sharing * 3 / 2);
+            likes += sharing
+        }
+    }
+    return likes
+
+    // second way
+    // let likes = []
+    // let sharing = 0;
+    // for(let i = 1; i <=n; i++){
+    //     if(i === 1){
+    //         sharing += Math.floor(5/2)
+    //         likes.push(sharing)
+    //     } else {
+    //         sharing = Math.floor(sharing * 3 / 2);
+    //         likes.push(sharing)
+    //     }
+    // }
+    // return likes.reduce((a, b) => a+b, 0)
+}
+viralAdvertising(3)
