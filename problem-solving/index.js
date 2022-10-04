@@ -273,3 +273,10 @@ function viralAdvertising(n) {
     // return likes.reduce((a, b) => a+b, 0)
 }
 viralAdvertising(3)
+
+function saveThePrisoner(n, m, s) {
+    let rem = m % n;
+    return (rem + s - 1) % n || n;
+
+}
+saveThePrisoner(7, 19, 2)
