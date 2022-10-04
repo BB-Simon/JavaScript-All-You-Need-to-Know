@@ -229,3 +229,16 @@ function jumpingOnClouds(c, k) {
 var c = [0, 0, 1, 0, 0, 1, 1, 0];
 jumpingOnClouds(c, 2)
 
+function findDigits(n) {
+    // Write your code here
+    const arr = n.toString().split("")
+    let x = 0
+    for(let i = 0; i < arr.length; i++) {
+        if(n % arr[parseInt(i)] === 0){
+           x++
+        }
+    }
+    return x
+}
+
+findDigits(1012)
