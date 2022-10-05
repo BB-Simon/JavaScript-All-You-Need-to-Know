@@ -280,3 +280,16 @@ function saveThePrisoner(n, m, s) {
 
 }
 saveThePrisoner(7, 19, 2)
+
+function circularArrayRotation(a, k, queries) {
+    let arr = []
+    for(let i = 0; i < k; i++){
+        let t = a.pop();
+        a.unshift(t)
+    }
+    for(let i = 0; i < queries.length; i++){
+        arr.push(a[queries[i]])
+    }
+    return arr
+}
+circularArrayRotation([3, 4, 5], 2, [1, 2])
