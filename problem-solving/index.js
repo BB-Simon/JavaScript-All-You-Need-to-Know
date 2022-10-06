@@ -293,3 +293,27 @@ function circularArrayRotation(a, k, queries) {
     return arr
 }
 circularArrayRotation([3, 4, 5], 2, [1, 2])
+
+function gradingStudents(grades) {
+    // first solution
+    // let arr = []
+    // for(let grade of grades){
+    //     let roundedGrade = Math.ceil(grade / 5) * 5
+    //     if(grade >= 38){
+    //         if(Math.abs(grade - roundedGrade) < 3){
+    //             arr.push(Math.ceil(grade / 5) * 5)
+    //         } else {
+    //             arr.push(grade)
+    //         }
+    //     } else {
+    //         arr.push(grade)
+    //     }
+    // }
+    // console.log(arr);
+    // return arr
+
+    // second solution
+    const arr = grades.map(n => n >= 38 && n % 5 >= 3 ? n + (5 - (n % 5)) : n)
+    return arr
+}
+gradingStudents([73, 67, 38, 33])
