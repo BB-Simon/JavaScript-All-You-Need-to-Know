@@ -313,7 +313,47 @@ function gradingStudents(grades) {
     // return arr
 
     // second solution
-    const arr = grades.map(n => n >= 38 && n % 5 >= 3 ? n + (5 - (n % 5)) : n)
-    return arr
+    return grades.map(n => n >= 38 && n % 5 >= 3 ? n + (5 - (n % 5)) : n)
+
 }
 gradingStudents([73, 67, 38, 33])
+
+/**
+ * Complete the 'countApplesAndOranges' function below.
+ *
+ * The function accepts following @parameters:
+ *  1. INTEGER s
+ *  2. INTEGER t
+ *  3. INTEGER a
+ *  4. INTEGER b
+ *  5. INTEGER_ARRAY apples
+ *  6. INTEGER_ARRAY oranges
+ **/
+
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    // first solution
+    // let app = 0
+    // let or = 0
+    // for(let i = 0; i < apples.length; i++) {
+    //     if(a + apples[i] >= s && a + apples[i] <=t){
+    //         app++
+    //     }
+    // }
+    // for(let i = 0; i < oranges.length; i++) {
+    //     if(b + oranges[i] >= s && b + oranges[i] <=t){
+    //         or++
+    //     }
+    // }
+    // console.log(app);
+    // console.log(or);
+
+    // second solution
+  const countApples = apples.reduce((x, apple) => a + apple >= s && a + apple <= t ? x + 1 : x,0)
+  const countOranges = oranges.reduce((x, orange) => b + orange >= s && b + orange <= t ? x + 1 : x,0)
+
+  console.log(countApples);
+  console.log(countOranges);
+
+}
+
+countApplesAndOranges(2, 3, 1, 5, [-2], [-1])
