@@ -399,3 +399,42 @@ function getTotalX(a, b) {
 
 getTotalX([2, 4], [16, 32, 96])
 
+/**
+ * Complete the 'breakingRecords' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY scores as parameter.
+ **/
+function breakingRecords(scores) {
+    // first solution
+//    let arr = [0, 0];
+   let min = scores[0]
+   let max = scores[0]
+//    for(let i = 0; i < scores.length; i++) {
+//         if(scores[i] > max) {
+//             arr[0] +=1
+//             max = scores[i]
+//         }
+//         if(scores[i] < min) {
+//             arr[1] +=1
+//             min = scores[i]
+//         }
+//    }
+
+    // second solution
+    const  arr = scores.reduce((arr, score) => {
+        if(score > max) {
+            arr[0] += 1
+            max = score
+        } else if(score < min) {
+            arr[1] += 1
+            min = score
+        }
+        return arr
+    } , [0, 0])
+   return arr
+}
+breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1])
+
+
+
