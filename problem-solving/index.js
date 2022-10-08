@@ -377,3 +377,25 @@ function kangaroo(x1, v1, x2, v2) {
     }
 }
 kangaroo(0, 2, 5, 3)
+
+/** 
+ * Complete the 'getTotalX' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY a
+ *  2. INTEGER_ARRAY b
+ **/
+function getTotalX(a, b) {
+    let count = 0
+    const max = Math.max(...a)
+    const min = Math.min(...b)
+
+    for(let i=max; i<=min ;i++){ 
+        if((a.every(e => i % e === 0)) && b.every(e => e % i === 0)) count++
+    }
+    return count
+}
+
+getTotalX([2, 4], [16, 32, 96])
+
