@@ -437,4 +437,46 @@ function breakingRecords(scores) {
 breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1])
 
 
+/**
+ * Complete the 'birthday' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER_ARRAY s
+ *  2. INTEGER d
+ *  3. INTEGER m
+**/
+function birthday(s, d, m) {
+    // first solution
+    // let day = 0
+    // let arr = [...s]
+    // for(let i = 0; i < s.length; i++){
+    //     let c = 0
+    //     for(let j = 0; j < m; j++){
+    //         if(arr[j] !== undefined){
+    //             c+= arr[j]
+    //         }
+    //     }
+    //     if(c === d) day+= 1
+    //     arr.shift()
+
+    // }
+    // return day
+
+    // second solution
+    let count = 0;
+    let sum;
+        
+    for (var i = 0; i < s.length; i++){
+        sum = s.slice(i, m + i).reduce((prev, curr) => prev + curr);
+        if (sum === d){
+            count++;
+        }
+    }
+    console.log(count);
+
+}
+birthday([4], 4, 1)
+
+
 
