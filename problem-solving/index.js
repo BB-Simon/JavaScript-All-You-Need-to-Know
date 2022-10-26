@@ -585,3 +585,32 @@ const arr = [
 ];
 
 diagonalDifference(arr)
+
+/*
+ * Complete the 'plusMinus' function below.
+ *
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+
+function plusMinus(arr) {
+    // Write your code here
+    let l = arr.length;
+    let p = 0;
+    let n = 0;
+    let z = 0;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > 0){
+            p++
+        } else if(arr[i] < 0) {
+            n++
+        }else {
+            z++
+        }
+    }
+    console.log((p/l).toFixed(6))
+    console.log((n/l).toFixed(6))
+    console.log(z)
+    console.log((z/l).toFixed(6))
+
+}
+plusMinus([-4, 3, -9, 0, 4, 1])
