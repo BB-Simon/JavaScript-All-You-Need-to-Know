@@ -478,5 +478,110 @@ function birthday(s, d, m) {
 }
 birthday([4], 4, 1)
 
+/**
+ * Complete the 'divisibleSumPairs' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER k
+ *  3. INTEGER_ARRAY ar
+**/
+function divisibleSumPairs(n, k, ar) {
+    // Write your code here
+    let count = 0;
+    for(let i = 0; i < ar.length; i++) {
+        for(let j = i; j < n; j++) {
+            if((ar[i] + ar[j]) % 2 === 0){
+                console.log(count++);
+            }
+        }
+    }
+}
+divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2])
 
 
+
+const  config = {
+    // as we have two types of listings, we have two types of categories 1. product 2. service
+    product: {
+    // "key" is the option you see in Flex Console.
+    // "label" is set here for the UI only.
+    // Note: label is not added through the translation files
+    // to make filter customizations a bit easier.
+    options: [
+        { key: 'constructionTools&equipment', label: 'Construction tools & equipment' },
+        { key: 'home&garden', label: 'Home & garden' },
+        { key: 'electronics', label: 'Electronics' },
+        { key: 'party', label: 'Party' },
+        { key: 'vehicles', label: 'Vehicles' },
+        { key: 'sports&leisure', label: 'Sports & leisure' },
+        { key: 'creativity', label: 'Creativity' },
+        { key: 'spaces', label: 'Spaces' },
+        { key: 'outdoorActivity', label: 'Outdoor activity' },
+        { key: 'clothesFashion', label: 'Clothes/Fashion' },
+        { key: 'cameras', label: 'Cameras' },
+        { key: 'other', label: 'Other' },
+    ],
+    },
+    service: {
+    // "key" is the option you see in Flex Console.
+    // "label" is set here for the UI only.
+    // Note: label is not added through the translation files
+    // to make filter customizations a bit easier.
+    options: [
+        { key: 'home&garden', label: 'Home & garden' },
+        { key: 'techyServices', label: 'Techy services' },
+        { key: 'party', label: 'Party' },
+        { key: 'vehicles', label: 'Vehicles' },
+        { key: 'sports&leisure', label: 'Sports & leisure' },
+        { key: 'education', label: 'Education' },
+        { key: 'creativity', label: 'Creativity' },
+        { key: 'transportation', label: 'Transportation' },
+        { key: 'photographer', label: 'Photographer' },
+        { key: 'other', label: 'Other' },
+    ],
+    }
+}
+
+const combinedProductAndServiceOptions = config => {
+    const arr = [...config['product'].options, ...config['service'].options];
+    const r = Array.from(new Set(arr.map(a => a.key))).map(key => {
+     return arr.find(a => a.key === key)
+    })
+    r.map((o, i) => o.key === "other" && r.push(r.splice(i, 1)))
+
+    return r;
+}
+
+combinedProductAndServiceOptions(config);
+
+/** 
+ * Complete the 'diagonalDifference' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+*/
+
+function diagonalDifference(arr) {
+    // Write your code here
+    let a = 0
+    let b = 0
+
+    for(let i = 0,j = arr.length - 1; i < arr.length && j >= 0; i++, j--){
+        a+=arr[i][i]
+        b+=arr[i][j]
+        console.log(i);
+        console.log(arr.length -1 - i);
+    }
+    
+    return Math.abs(a - b);
+}
+
+const arr = [
+    [11, 2, 4],
+    [4, 5, 6],
+    [10, 8, -12],
+];
+
+diagonalDifference(arr)
