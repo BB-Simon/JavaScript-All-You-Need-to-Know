@@ -614,3 +614,30 @@ function plusMinus(arr) {
 
 }
 plusMinus([-4, 3, -9, 0, 4, 1])
+
+/**
+ * Complete the 'staircase' function below.
+ *
+ * The function accepts INTEGER n as parameter.
+ */
+
+function staircase(n) {
+    let stair = 0;
+    let result = "";
+
+    for(let i = n; i > 0; i--) {
+        stair++
+        i-1
+        for(let x = 1; x < i; x++){
+            result+=" "
+        }
+        for(let j = 0; j < stair; j++){
+            result+=`#`;
+        }
+        result+="\n"
+    }
+    console.log(`res: ${result}`);
+
+}
+
+staircase(6)
