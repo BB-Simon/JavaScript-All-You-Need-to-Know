@@ -679,3 +679,26 @@ function birthdayCakeCandles(candles) {
     return t
 }
 birthdayCakeCandles([3, 2, 1, 3])
+
+/**
+ * Complete the 'timeConversion' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+
+function timeConversion(s) {
+    // Write your code here
+    const [hour, minutes, rest] = s.split(':');
+    const seconds = rest.slice(0, 2);
+    const modifire = rest.slice(2)
+    let hh = hour, mm = minutes, ss = seconds;
+    if(modifire.toLowerCase() === "pm" && parseInt(hour, 10) !== 12) {
+        hh = parseInt(hour, 10) + 12;
+    } else if(modifire.toLowerCase() === "am" && parseInt(hour, 10) === 12) {
+        hh = '00'
+    }
+    console.log(`${hh}:${mm}:${ss}`);
+}
+
+timeConversion('12:45:54PM')
