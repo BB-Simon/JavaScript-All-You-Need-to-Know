@@ -659,3 +659,23 @@ function miniMaxSum(arr) {
     console.log( Math.min(...sum), Math.max(...sum));
 }
 miniMaxSum([5, 5, 5, 5 , 5])
+
+/**
+ * Complete the 'birthdayCakeCandles' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY candles as parameter.
+ */
+
+function birthdayCakeCandles(candles) {
+    // Write your code here
+    const max = Math.max(...candles);
+    let t = 0;
+    for(let i = 0; i < candles.length; i++) {
+        if(candles[i] === max) {
+            t++
+        }
+    }
+    return t
+}
+birthdayCakeCandles([3, 2, 1, 3])
