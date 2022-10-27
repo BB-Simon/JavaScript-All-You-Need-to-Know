@@ -641,3 +641,21 @@ function staircase(n) {
 }
 
 staircase(6)
+
+function miniMaxSum(arr) {
+    // Write your code here
+    const count = arr.length;
+    let sum = [];
+    
+    for(let i = 0; i < count; i++) {
+        let t = 0
+        let tem = [...arr]
+        tem.splice(i, 1)
+        for(let j = 0; j < tem.length; j++) {
+            t+=tem[j];
+        }
+        sum.push(t)
+    }
+    console.log( Math.min(...sum), Math.max(...sum));
+}
+miniMaxSum([5, 5, 5, 5 , 5])
