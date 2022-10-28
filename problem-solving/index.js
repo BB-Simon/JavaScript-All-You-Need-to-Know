@@ -702,3 +702,30 @@ function timeConversion(s) {
 }
 
 timeConversion('12:45:54PM')
+
+
+/**
+ * Complete the 'quickSort' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+
+function quickSort(arr) {
+    // Write your code here
+    const pivot = arr[0]
+    const left = [];
+    const right = [];
+
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > pivot){
+            right.push(arr[i])
+        } else if(arr[i] < pivot){
+            left.push(arr[i])
+        }
+    }
+
+    console.log([...left, pivot, ...right])
+}
+
+quickSort([4, 5, 3, 7, 2])
