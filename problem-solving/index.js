@@ -760,3 +760,25 @@ const f = [63, 25, 73, 1, 98, 73, 56, 84, 86, 57, 16, 83, 8, 25, 81, 56, 9, 53, 
     33, 60, 65, 16, 82, 67, 61, 32, 21, 79 ,75, 75, 13, 87, 70, 33]
 
 countingSort(f)
+
+function countingSort2(arr) {
+    // Write your code here
+    const zeros = []
+    const min = Math.min(...arr)
+    const max = Math.max(...arr)
+    const range = []
+    for(let i = min; i <= max; i++) {
+        range.push(i)
+    }
+  
+    for(let i = 0; i < range.length; i++) {
+        for(let j = 0; j < arr.length; j++) {
+            if(range[i] === arr[j]){
+                zeros.push(arr[j])
+            }  
+        }  
+    }
+    return zeros
+}
+
+countingSort2([19, 10, 12, 10, 24, 25, 22])
