@@ -244,6 +244,7 @@ Today's topic: bind, call, apply Methods
 
 // var binded = add.bind(obj1);
 // console.log(binded(10, 5));
+
 /*Twinkle Cats, JavaScript OOP
 Lecture_6
 Today's topic:  inheritence
@@ -306,3 +307,41 @@ var cat = myName(Animale, "Simon", "Jimon");
 // var dog = new Animale("Dog");
 
 // console.log(dog.printName());
+
+
+
+/********************************************************
+******* Studying Object In Microverse Training **********
+******* 11-01-2023 **********
+*********************************************************/
+
+// Create Object
+const obj1 = {a: "A"}
+const obj2 = new Object();
+obj2.a = "A";
+
+function ObjConstructor(a) {
+  this.a = a
+}
+
+ObjConstructor.prototype.b = "B";
+const obj3 = new ObjConstructor('A');
+
+const obj4 = Object.create(null);
+obj4.a = "A";
+
+function delay(ms) {
+  // your code
+  return new Promise((resolve, reject )=> {
+    setTimeout(resolve, ms)
+  })
+}
+
+// delay(3000).then(() => console.log('runs after 3 seconds'));
+
+
+
+
+
+
+

@@ -782,3 +782,57 @@ function countingSort2(arr) {
 }
 
 countingSort2([19, 10, 12, 10, 24, 25, 22])
+
+
+// let n = 0;
+let x = 0;
+// while (n < 3) {
+//     n++
+//     x = x + n
+// }
+
+for(let n = 0; n <= 3; n++){
+    x = x + n
+}
+
+
+/**
+ * Complete the getMoneySpent function below.
+ */
+function getMoneySpent(keyboards, drives, b) {
+    let total = -1;
+
+    for(let i = 0; i < keyboards.length; i++){
+        for(let j = 0; j < drives.length; j++){
+            let x = keyboards[i] + drives[j];
+            if(x > total && x <= b){
+                total = keyboards[i] + drives[j];
+            }
+        }
+    }
+    console.log(total);
+}
+
+const keyboard = [3, 1, 80];
+const drives = [5, 2, 8, 12, 34, 45];
+// getMoneySpent(keyboard, drives, 100);
+
+
+/**
+ * Complete the 'camelcase' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+function camelcase(s) {
+    let count = 1;
+    for(let i = 0; i < s.length; i++){
+        if(/[A-Z]/.test(s[i])) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+camelcase('saveChangesInTheEditor')
