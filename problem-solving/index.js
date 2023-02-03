@@ -835,4 +835,34 @@ function camelcase(s) {
     return count;
 }
 
-camelcase('saveChangesInTheEditor')
+// camelcase('saveChangesInTheEditor')
+
+/**
+ * Complete the 'countingValleys' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER steps
+ *  2. STRING path
+ */
+
+function countingValleys(steps, path) {
+    // Write your code here
+    let seaLevel = 0;
+    let flag = false;
+    let valleycount = 0;
+        
+    for(let i = 0; i < steps; i++) {
+        if(path[i] == 'D' && seaLevel == 0) flag = true;
+        if(path[i] == 'U' && seaLevel == 0) flag = false;
+        if(path[i] == 'U') seaLevel++;
+        if(path[i] == 'D') seaLevel--;
+        if(flag && seaLevel == 0) valleycount++;
+    }
+
+    console.log(valleycount);
+
+    return valleycount;
+}
+
+countingValleys(8, 'UDDDUDUU')
