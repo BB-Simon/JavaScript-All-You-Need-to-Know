@@ -865,4 +865,31 @@ function countingValleys(steps, path) {
     return valleycount;
 }
 
-countingValleys(8, 'UDDDUDUU')
+// countingValleys(8, 'UDDDUDUU')
+
+
+/**
+ * Complete the 'marsExploration' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+
+function marsExploration(s) {
+    // Write your code here
+    const sos = 'SOS';
+    const len = s.length / sos.length;
+    let changeCount = 0;
+
+    for(let i = 0; i < len; i++){
+        for(let j = 0; j < sos.length; j++){
+            if(sos[j] !== s[j]) {
+                changeCount++;
+            }
+        }
+        s = s.slice(sos.length);
+    }
+    return changeCount;
+}
+
+marsExploration('SOSSOSSSSOSOIEISOSPOISOSIUSISO')
