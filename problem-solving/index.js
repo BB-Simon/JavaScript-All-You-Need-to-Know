@@ -930,7 +930,30 @@ function divisibleSumPairs(n, k, ar) {
     return pairs;
 }
 
-const str = '92 91 27 20 9 43 73 39 24 54 33 64 27 47 32 58 76 78 33 57 5 22 89 78 64 48 41 39 74 33 45 16 16 72 8 42 52 15 64 86 31 73 87 46 30 86 89 67 82 7 91 8 64 32 97 77 31 32 74 40 70 77 56 25 50 8 61 58 1 30 93 66 15 53 64 1 56 69 3 28 26 76 78 38 5 60 43 30 100 58 4 59 78 85 48 89 74 12 54 38';
-const newA = str.split(' ');
+// divisibleSumPairs(6, 5, [1, 2, 3, 4, 5, 6])
 
-divisibleSumPairs(6, 5, [1, 2, 3, 4, 5, 6])
+/**
+ * Complete the 'hackerrankInString' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+
+function hackerrankInString(s) {
+    const base = 'hackerrank';
+    let b = 0;
+
+    for(let i=0; i < s.length; i++) {
+        if(s[i] === base[b]) {
+            b++;
+        }
+    }
+
+    if(b === base.length) {
+        return 'Yes'
+    } else {
+        return 'No'
+    }
+}
+
+hackerrankInString('hereiamstackerrank');
