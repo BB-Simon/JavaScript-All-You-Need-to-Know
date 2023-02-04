@@ -877,19 +877,60 @@ function countingValleys(steps, path) {
 
 function marsExploration(s) {
     // Write your code here
-    const sos = 'SOS';
-    const len = s.length / sos.length;
-    let changeCount = 0;
+    // const sos = 'SOS';
+    // const len = s.length / sos.length;
+    // let modifiedCount = 0;
 
-    for(let i = 0; i < len; i++){
-        for(let j = 0; j < sos.length; j++){
-            if(sos[j] !== s[j]) {
-                changeCount++;
-            }
+    // for(let i = 0; i < len; i++){
+    //     for(let j = 0; j < sos.length; j++){
+    //         if(sos[j] !== s[j]) {
+    //             modifiedCount++;
+    //         }
+    //     }
+    //     s = s.slice(sos.length);
+    // }
+    // return modifiedCount;
+
+    const n = s.length;
+    const r = "SOS".repeat(n / 3);
+    let t = 0;
+
+    for (let i = 0; i < n; i++) {
+        if (s[i] !== r[i]) {
+            t++;
         }
-        s = s.slice(sos.length);
     }
-    return changeCount;
+    console.log(t);
+    return t;
+
 }
 
-marsExploration('SOSSOSSSSOSOIEISOSPOISOSIUSISO')
+// marsExploration('SOSSOSSSSOSOIEISOSPOISOSIUSISO')
+
+/**
+ * Complete the 'divisibleSumPairs' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER k
+ *  3. INTEGER_ARRAY ar
+ */
+
+function divisibleSumPairs(n, k, ar) {
+    let pairs = 0;
+    for(let i = 0; i < n; i++) {
+        for(let j = 0; j < n; j++) {
+            const sum = ar[i] + ar[j];
+            if(i < j && sum % k === 0 ) {
+                pairs+=1;
+            }
+        }
+    }
+    return pairs;
+}
+
+const str = '92 91 27 20 9 43 73 39 24 54 33 64 27 47 32 58 76 78 33 57 5 22 89 78 64 48 41 39 74 33 45 16 16 72 8 42 52 15 64 86 31 73 87 46 30 86 89 67 82 7 91 8 64 32 97 77 31 32 74 40 70 77 56 25 50 8 61 58 1 30 93 66 15 53 64 1 56 69 3 28 26 76 78 38 5 60 43 30 100 58 4 59 78 85 48 89 74 12 54 38';
+const newA = str.split(' ');
+
+divisibleSumPairs(6, 5, [1, 2, 3, 4, 5, 6])
