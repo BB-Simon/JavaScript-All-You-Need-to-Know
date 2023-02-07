@@ -956,4 +956,31 @@ function hackerrankInString(s) {
     }
 }
 
-hackerrankInString('hereiamstackerrank');
+// hackerrankInString('hereiamstackerrank');
+
+/**
+ * Complete the 'pangrams' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+
+function pangrams(s) {
+    const str = s.replace(/\s/g,'').toLowerCase();
+    const alphas = {};
+    for(let i = 0; i < str.length; i++){
+        if(Object.keys(alphas).includes(str[i])){
+            alphas[str[i]] += 1
+        } else {
+            alphas[str[i]] = 1
+        }
+    }
+
+    if(Object.keys(alphas).length === 26){
+        return 'pangram '
+    } else {
+        return 'not pangram'
+    }
+}
+
+pangrams('We promptly judged antique ivory buckles for the next prize')
