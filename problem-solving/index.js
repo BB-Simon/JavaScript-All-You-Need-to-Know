@@ -120,7 +120,7 @@ function hurdleRace(k, height) {
     
 }
 const height = [1, 6, 3, 5, 2];
-const h = hurdleRace(4, height);
+// const h = hurdleRace(4, height);
 
 function designerPdfViewer(h, word) {
     const alpah = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -136,7 +136,7 @@ function designerPdfViewer(h, word) {
     
 }
 const heightOfEachChar = [1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7]
-designerPdfViewer(heightOfEachChar, 'zaba');
+// designerPdfViewer(heightOfEachChar, 'zaba');
 
 function utopianTree(n) {
     // Write your code here
@@ -151,7 +151,7 @@ function utopianTree(n) {
     return height
 }
 
-utopianTree(4);
+// utopianTree(4);
 
 
 // Angry Professor | Hackerarank
@@ -170,7 +170,7 @@ function angryProfessor(k, a) {
     }
 }
 
-angryProfessor(3, [-1, -3, 4, 2])
+// angryProfessor(3, [-1, -3, 4, 2])
 
 function beautifulDays(i, j, k) {
     // Write your code here
@@ -185,7 +185,7 @@ function beautifulDays(i, j, k) {
     return count;
 }
 
-beautifulDays(20, 23, 6)
+// beautifulDays(20, 23, 6)
 
 function permutationEquation(p) {
     // Write your code here
@@ -199,7 +199,7 @@ function permutationEquation(p) {
     return arr
 
 }
-permutationEquation([4, 3, 5, 1,2])
+// permutationEquation([4, 3, 5, 1,2])
 
 
 function jumpingOnClouds(c, k) {
@@ -227,7 +227,7 @@ function jumpingOnClouds(c, k) {
 
 
 var c = [0, 0, 1, 0, 0, 1, 1, 0];
-jumpingOnClouds(c, 2)
+// jumpingOnClouds(c, 2)
 
 function findDigits(n) {
     // Write your code here
@@ -241,7 +241,7 @@ function findDigits(n) {
     return x
 }
 
-findDigits(1012)
+// findDigits(1012)
 
 function viralAdvertising(n) {
     // first way
@@ -272,14 +272,14 @@ function viralAdvertising(n) {
     // }
     // return likes.reduce((a, b) => a+b, 0)
 }
-viralAdvertising(3)
+// viralAdvertising(3)
 
 function saveThePrisoner(n, m, s) {
     let rem = m % n;
     return (rem + s - 1) % n || n;
 
 }
-saveThePrisoner(7, 19, 2)
+// saveThePrisoner(7, 19, 2)
 
 function circularArrayRotation(a, k, queries) {
     let arr = []
@@ -292,7 +292,7 @@ function circularArrayRotation(a, k, queries) {
     }
     return arr
 }
-circularArrayRotation([3, 4, 5], 2, [1, 2])
+// circularArrayRotation([3, 4, 5], 2, [1, 2])
 
 function gradingStudents(grades) {
     // first solution
@@ -316,7 +316,7 @@ function gradingStudents(grades) {
     return grades.map(n => n >= 38 && n % 5 >= 3 ? n + (5 - (n % 5)) : n)
 
 }
-gradingStudents([73, 67, 38, 33])
+// gradingStudents([73, 67, 38, 33])
 
 /**
  * Complete the 'countApplesAndOranges' function below.
@@ -356,7 +356,7 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
 
 }
 
-countApplesAndOranges(2, 3, 1, 5, [-2], [-1])
+// countApplesAndOranges(2, 3, 1, 5, [-2], [-1])
 
 
 /**
@@ -376,7 +376,7 @@ function kangaroo(x1, v1, x2, v2) {
         return 'YES';
     }
 }
-kangaroo(0, 2, 5, 3)
+// kangaroo(0, 2, 5, 3)
 
 /** 
  * Complete the 'getTotalX' function below.
@@ -397,7 +397,7 @@ function getTotalX(a, b) {
     return count
 }
 
-getTotalX([2, 4], [16, 32, 96])
+// getTotalX([2, 4], [16, 32, 96])
 
 /**
  * Complete the 'breakingRecords' function below.
@@ -434,7 +434,7 @@ function breakingRecords(scores) {
     } , [0, 0])
    return arr
 }
-breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1])
+// breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1])
 
 
 /**
@@ -476,7 +476,7 @@ function birthday(s, d, m) {
     console.log(count);
 
 }
-birthday([4], 4, 1)
+// birthday([4], 4, 1)
 
 /**
  * Complete the 'divisibleSumPairs' function below.
@@ -498,7 +498,7 @@ function divisibleSumPairs(n, k, ar) {
         }
     }
 }
-divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2])
+// divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2])
 
 
 
@@ -554,7 +554,7 @@ const combinedProductAndServiceOptions = config => {
     return r;
 }
 
-combinedProductAndServiceOptions(config);
+// combinedProductAndServiceOptions(config);
 
 /** 
  * Complete the 'diagonalDifference' function below.
@@ -584,7 +584,7 @@ const arr = [
     [10, 8, -12],
 ];
 
-diagonalDifference(arr)
+// diagonalDifference(arr)
 
 /*
  * Complete the 'plusMinus' function below.
@@ -613,7 +613,7 @@ function plusMinus(arr) {
     console.log((z/l).toFixed(6))
 
 }
-plusMinus([-4, 3, -9, 0, 4, 1])
+// plusMinus([-4, 3, -9, 0, 4, 1])
 
 /**
  * Complete the 'staircase' function below.
@@ -640,7 +640,7 @@ function staircase(n) {
 
 }
 
-staircase(6)
+// staircase(6)
 
 function miniMaxSum(arr) {
     // Write your code here
@@ -658,7 +658,7 @@ function miniMaxSum(arr) {
     }
     console.log( Math.min(...sum), Math.max(...sum));
 }
-miniMaxSum([5, 5, 5, 5 , 5])
+// miniMaxSum([5, 5, 5, 5 , 5])
 
 /**
  * Complete the 'birthdayCakeCandles' function below.
@@ -678,7 +678,7 @@ function birthdayCakeCandles(candles) {
     }
     return t
 }
-birthdayCakeCandles([3, 2, 1, 3])
+// birthdayCakeCandles([3, 2, 1, 3])
 
 /**
  * Complete the 'timeConversion' function below.
@@ -701,7 +701,7 @@ function timeConversion(s) {
     console.log(`${hh}:${mm}:${ss}`);
 }
 
-timeConversion('12:45:54PM')
+// timeConversion('12:45:54PM')
 
 
 /**
@@ -728,7 +728,7 @@ function quickSort(arr) {
     console.log([...left, pivot, ...right])
 }
 
-quickSort([4, 5, 3, 7, 2])
+// quickSort([4, 5, 3, 7, 2])
 
 /**
  * Complete the 'countingSort' function below.
@@ -759,7 +759,7 @@ const f = [63, 25, 73, 1, 98, 73, 56, 84, 86, 57, 16, 83, 8, 25, 81, 56, 9, 53, 
     78, 22, 6 ,90 ,99 ,89 ,50 ,30 ,20 , 1, 43, 3, 70, 95, 33, 46, 44, 9, 69, 48 ,
     33, 60, 65, 16, 82, 67, 61, 32, 21, 79 ,75, 75, 13, 87, 70, 33]
 
-countingSort(f)
+// countingSort(f)
 
 function countingSort2(arr) {
     // Write your code here
@@ -781,7 +781,7 @@ function countingSort2(arr) {
     return zeros
 }
 
-countingSort2([19, 10, 12, 10, 24, 25, 22])
+// countingSort2([19, 10, 12, 10, 24, 25, 22])
 
 
 // let n = 0;
@@ -983,4 +983,54 @@ function pangrams(s) {
     }
 }
 
-pangrams('We promptly judged antique ivory buckles for the next prize')
+// pangrams('We promptly judged antique ivory buckles for the next prize')
+
+/**
+ * Complete the 'weightedUniformStrings' function below.
+ *
+ * The function is expected to return a STRING_ARRAY.
+ * The function accepts following parameters:
+ *  1. STRING s
+ *  2. INTEGER_ARRAY queries
+ */
+
+function weightedUniformStrings(s, queries) {
+    // Write your code here
+    const alphaCode = Array.from(Array(26)).map((e, i) => i + 65);
+    const alphabet = alphaCode.map((x) => String.fromCharCode(x).toLowerCase());
+   
+    const arr = s.split('');
+    let q = 1;
+    const u = {};
+
+    arr.forEach((e, i) => {
+        if(e === arr[i + 1]){
+            q += 1;
+            return;
+        }
+        let x = 1;
+        let al = ''
+        while(x <= q){
+            al += e;
+            u[al] = x * (alphabet.indexOf(e) + 1)
+            x++
+        }
+        q = 1
+        al = ''
+    });
+
+
+    const y = queries.map((e, i) => {
+        let temp = 'NO'
+        Object.keys(u).forEach((k) => {
+            if(u[k] === e) {
+                temp = 'YES'
+            }
+        })
+        return temp
+    });
+
+    console.log(y);
+}
+
+weightedUniformStrings('abccddde', [1, 3, 12, 5, 9, 10])
