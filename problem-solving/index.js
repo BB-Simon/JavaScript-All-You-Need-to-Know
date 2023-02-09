@@ -995,42 +995,59 @@ function pangrams(s) {
  */
 
 function weightedUniformStrings(s, queries) {
-    // Write your code here
-    const alphaCode = Array.from(Array(26)).map((e, i) => i + 65);
-    const alphabet = alphaCode.map((x) => String.fromCharCode(x).toLowerCase());
+    /**
+     * First solution
+     */
+
+    // const alphaCode = Array.from(Array(26)).map((e, i) => i + 65);
+    // const alphabet = alphaCode.map((x) => String.fromCharCode(x).toLowerCase());
    
-    const arr = s.split('');
-    let q = 1;
-    const u = {};
+    // const arr = s.split('');
+    // let q = 1;
+    // const u = [];
 
-    arr.forEach((e, i) => {
-        if(e === arr[i + 1]){
-            q += 1;
-            return;
+    // arr.forEach((e, i) => {
+    //     if(e === arr[i + 1]){
+    //         q += 1;
+    //         return;
+    //     }
+    //     let x = 1;
+    //     while(x <= q){
+    //         u.push(x * (alphabet.indexOf(e) + 1))
+    //         x++
+    //     }
+    //     q = 1
+    // });
+    
+
+    // const y = queries.map((e, i) => {
+    //     if(u.includes(e)){
+    //         return 'Yes'
+    //     } else {
+    //         return "No"
+    //     }
+    // });
+    // return y
+
+    const substr = s.match(/(.)\1{0,}/g);
+    let weights = new Set();
+    let ans = [];
+
+    
+    for (let i = 0; i < substr.length; i++) {
+        for (let count = 1; count <= substr[i].length; count++) {
+           console.log(substr[i].charCodeAt(0));
+            weights.add((substr[i].charCodeAt(0) - 96) * count);
         }
-        let x = 1;
-        let al = ''
-        while(x <= q){
-            al += e;
-            u[al] = x * (alphabet.indexOf(e) + 1)
-            x++
-        }
-        q = 1
-        al = ''
+    }
+
+    queries.forEach(val => {
+        const include = weights.has(val) ? 'Yes' : 'No';
+        ans.push(include);
     });
+    
+    return ans
 
-
-    const y = queries.map((e, i) => {
-        let temp = 'NO'
-        Object.keys(u).forEach((k) => {
-            if(u[k] === e) {
-                temp = 'YES'
-            }
-        })
-        return temp
-    });
-
-    console.log(y);
 }
 
 weightedUniformStrings('abccddde', [1, 3, 12, 5, 9, 10])
