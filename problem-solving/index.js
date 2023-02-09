@@ -1036,7 +1036,6 @@ function weightedUniformStrings(s, queries) {
     
     for (let i = 0; i < substr.length; i++) {
         for (let count = 1; count <= substr[i].length; count++) {
-           console.log(substr[i].charCodeAt(0));
             weights.add((substr[i].charCodeAt(0) - 96) * count);
         }
     }
@@ -1047,7 +1046,34 @@ function weightedUniformStrings(s, queries) {
     });
     
     return ans
-
 }
 
-weightedUniformStrings('abccddde', [1, 3, 12, 5, 9, 10])
+// weightedUniformStrings('abccddde', [1, 3, 12, 5, 9, 10])
+
+/**
+ * Complete the 'funnyString' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+
+
+function funnyString(s) {
+    // Write your code here
+    const sCharCode = [];
+    for (let i = 0; i < s.length; i++) {
+        sCharCode.push(s.charCodeAt(i))
+    };
+
+    const rCharCode = [...sCharCode].reverse();
+    for(let i = 1; i < sCharCode.length; i++){
+        const sCode = Math.abs(sCharCode[i] - sCharCode[i-1]);
+        const rCode = Math.abs(rCharCode[i] - rCharCode[i-1]);
+        if(sCode !== rCode){
+            return "Not Funny"
+        };
+    }
+    return 'Funny'
+}
+
+// console.log(funnyString('acxz'));
