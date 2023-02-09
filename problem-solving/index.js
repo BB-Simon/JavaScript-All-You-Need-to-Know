@@ -1077,3 +1077,29 @@ function funnyString(s) {
 }
 
 // console.log(funnyString('acxz'));
+
+/**
+ * Complete the 'gemstones' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING_ARRAY arr as parameter.
+ */
+
+function gemstones(arr) {
+    // Write your code here;
+    let s = new Set(arr[0]);
+    // for(let i = 0; i < arr.length; i++) {
+    //     const x = new Set(arr[i])
+    //     s = new Set([...s].filter(e => x.has(e)))
+    // }
+    let i = 0;
+    while(i !== arr.length) {
+        const x = new Set(arr[i]);
+        s = new Set([...s].filter(e => x.has(e)));
+        i+= 1;
+    }
+    console.log(s)
+    return s.size
+}
+
+gemstones(['abcdddd', 'abcd', 'bcd'])
