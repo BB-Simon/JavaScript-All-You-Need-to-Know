@@ -1116,7 +1116,33 @@ function alternatingCharacters(s) {
         if(s[i] === s[i-1]) count+= 1;
     }
     
+    console.log(count);
     return count;
 }
 
-// alternatingCharacters('AAAB');
+// alternatingCharacters('AABBBBbbbbaaaAB');
+
+/**
+ * Complete the 'beautifulBinaryString' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING b as parameter.
+ */
+
+function beautifulBinaryString(b) {
+    // Write your code here
+    let moves = 0;
+    let i = 0;
+
+    while(i < b.length){
+        const sub = b.substr(i, 3);
+        if(sub == "010") {
+            moves++;
+            i+=3
+        } else i++;
+    }
+   
+    return moves;
+}
+
+// beautifulBinaryString('0100101010');
