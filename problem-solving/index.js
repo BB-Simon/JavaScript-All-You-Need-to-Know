@@ -1098,8 +1098,25 @@ function gemstones(arr) {
         s = new Set([...s].filter(e => x.has(e)));
         i+= 1;
     }
-    console.log(s)
     return s.size
 }
 
-gemstones(['abcdddd', 'abcd', 'bcd'])
+// gemstones(['abcdddd', 'abcd', 'bcd'])
+
+/**
+ * Complete the 'alternatingCharacters' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+
+function alternatingCharacters(s) {
+    let count = 0;
+    for(let i = 0; i < s.length; i++){
+        if(s[i] === s[i-1]) count+= 1;
+    }
+    
+    return count;
+}
+
+// alternatingCharacters('AAAB');
