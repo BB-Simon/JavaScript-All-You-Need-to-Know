@@ -1136,7 +1136,7 @@ function beautifulBinaryString(b) {
 
     while(i < b.length){
         const sub = b.substr(i, 3);
-        if(sub == "010") {
+        if(sub === "010") {
             moves++;
             i+=3
         } else i++;
@@ -1146,3 +1146,22 @@ function beautifulBinaryString(b) {
 }
 
 // beautifulBinaryString('0100101010');
+
+/**
+ * Complete the 'theLoveLetterMystery' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+
+function theLoveLetterMystery(s) {
+    let str = [...s].map(e=>e.charCodeAt(0))
+    let ans = 0;
+     for(let i=0; i < str.length / 2; i++){
+        ans += Math.abs(str[(str.length - 1) - i] - str[i])
+    }
+
+    return ans;
+}
+
+theLoveLetterMystery('feazhaxpux')
