@@ -1164,4 +1164,79 @@ function theLoveLetterMystery(s) {
     return ans;
 }
 
-theLoveLetterMystery('feazhaxpux')
+// theLoveLetterMystery('feazhaxpux')
+
+
+
+
+const isPalindrome = word => {
+  const reversedWord = [...word].reverse().join('');
+  return word === reversedWord;
+};
+
+const allSubstringsOfWord = word => {
+  const substrings = [];
+  const arrayA = [...word];
+  let subStringALength = 1;
+  while (subStringALength <= arrayA.length) {
+    for (let i = 0; i <= arrayA.length - subStringALength; i++) {
+      const newWord = arrayA.slice(i, i + subStringALength);
+      substrings.push(newWord.join(''));
+    }
+    subStringALength++;
+  }
+  return substrings;
+};
+
+/**
+ * Complete the 'buildPalindrome' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts following parameters:
+ *  1. STRING a
+ *  2. STRING b
+ */
+
+function buildPalindrome(a, b) {
+    const subStringsA = allSubstringsOfWord(a);
+    const subStringsB = allSubstringsOfWord(b);
+
+    const multiplexedArray = subStringsA.flatMap(wordA => subStringsB.map(wordB => wordA + wordB));
+   
+//    console.log(multiplexedArray);
+    
+   const bestPalyndrome = multiplexedArray.reduce((acc, cur) => {
+        const word = cur;
+        if (isPalindrome(word)) {
+        if (word.length > acc.length) {
+            return word;
+        } else if (word.length === acc.length) {
+            if (acc < word) {
+            return acc;
+            }
+            return word;
+        }
+        }
+        return acc;
+    }, '');
+    if (bestPalyndrome === '') return -1;
+
+    console.log(bestPalyndrome);
+    return bestPalyndrome;
+
+}
+
+buildPalindrome('bac', 'bac')
+
+
+/**
+ * Complete the 'gameOfThrones' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+
+function gameOfThrones(s) {
+    // Write your code here
+
+}
