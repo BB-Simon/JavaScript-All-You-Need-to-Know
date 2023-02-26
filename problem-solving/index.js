@@ -1264,25 +1264,6 @@ function gameOfThrones(s) {
  * The function accepts STRING s as parameter.
  */
 
-// def anagram(s):
-//     if len(s) %2 != 0:
-//         return -1
-    
-//     a = [*s[:len(s)//2]]
-//     b = [*s[len(s)//2:]]
-//     c = 0
-
-//     print(f'a => {a}')
-//     print(f'b => {b}')
-//     for i in a:
-//         if i not in b:
-//             c += 1
-//         else:
-//             b.remove(i)  
-
-//     print(f'b after => {b}')        
-//     return c
-
 function anagram(s) {
     // Write your code here
     const len = s.length;
@@ -1304,4 +1285,43 @@ function anagram(s) {
     return c;
 }
 
-console.log(anagram('xyyx'));
+// console.log(anagram('xyyx'));
+
+/**
+ * Complete the 'makingAnagrams' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. STRING s1
+ *  2. STRING s2
+ */
+
+//  s1 = list(s1)
+//     s2 = list(s2)
+//     i = 0
+//     while i < len(s1):
+//         if s1[i] in s2:
+//             s2.remove(s1[i])
+//             s1.remove(s1[i])
+//             continue
+//         i += 1
+//     return len(s1) + len(s2)
+
+function makingAnagrams(s1, s2) {
+    // Write your code here
+    const str1 = s1.split('');   
+    const str2 = s2.split(''); 
+    let i = 0;
+    
+    while(i < str1.length) {
+        if(str2.includes(str1[i])) {
+            str2.splice(str2.indexOf(str1[i]), 1);
+            str1.splice(str1.indexOf(str1[i]), 1);
+            continue
+        }
+        i+= 1;
+    }
+    console.log(str1.length + str2.length);
+}
+
+// makingAnagrams('abc', 'amnop')
