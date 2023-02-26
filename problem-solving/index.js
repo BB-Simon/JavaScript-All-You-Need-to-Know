@@ -1237,6 +1237,71 @@ buildPalindrome('bac', 'bac')
  */
 
 function gameOfThrones(s) {
-    // Write your code here
+    let odds = 0
+    const count = (i) => s.split().reduce((a, b) => a + (b === i), 0);
+ 
+    while(s){
+        if(odds > 1) {
+            return 'NO'
+        }
+        console.log(count(s[0]))
 
+        if(count(s[0]) % 2 == 1) {
+            odds += 1
+        }
+        s = s.slice(1)
+    }
+        
+    return 'YES'
 }
+
+// const a = gameOfThrones('cdefghmnopqrstuvw');
+
+/**
+ * Complete the 'anagram' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+
+// def anagram(s):
+//     if len(s) %2 != 0:
+//         return -1
+    
+//     a = [*s[:len(s)//2]]
+//     b = [*s[len(s)//2:]]
+//     c = 0
+
+//     print(f'a => {a}')
+//     print(f'b => {b}')
+//     for i in a:
+//         if i not in b:
+//             c += 1
+//         else:
+//             b.remove(i)  
+
+//     print(f'b after => {b}')        
+//     return c
+
+function anagram(s) {
+    // Write your code here
+    const len = s.length;
+    if(len % 2 !== 0){
+        return -1;
+    }
+
+    const d = Math.floor(len / 2);
+    const a = s.slice(0, d).split('');
+    const b = s.slice(d).split('');
+    let c = 0;
+    for(let i = 0; i < a.length; i++){
+        if(!b.includes(a[i])){
+            c+= 1;
+        } else {
+            b.splice(b.indexOf(a[i]), 1);
+        }
+    }
+    return c;
+}
+
+console.log(anagram('xyyx'));
