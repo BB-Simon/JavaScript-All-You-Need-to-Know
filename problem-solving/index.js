@@ -1325,3 +1325,26 @@ function makingAnagrams(s1, s2) {
 }
 
 // makingAnagrams('abc', 'amnop')
+
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefix = function (strs) {
+    let res = '';
+    strs = strs.sort();
+    const first = strs[0];
+    const last = strs[strs.length - 1]
+    const len = Math.min(first.length, last?.length);
+
+    for (let i = 0; i < len; i++) {
+        if (first[i] !== last[i]) {
+            return res
+        } else {
+            res += first[i]
+        }
+    }
+    return res
+};
+
+// longestCommonPrefix(["aaa", "aa", "aaa"])

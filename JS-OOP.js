@@ -342,6 +342,29 @@ function delay(ms) {
 
 
 
+const person = {
+  name: "Simon",
+  featurs: {
+    test1: "test1",
+    education: {
+      one: 'test',
+      two: {
+        two: 'test2',
+        three: {
+          three: 'test3',
+          four: {
+            test4: 'test4',
+          }
+        }
+      }
+    }
+  }
+}
 
 
-
+const person2 = Object.assign({}, person)
+const person3 = Object.assign({}, person, {
+  featurs: 'test without two'
+})
+// console.log('person2', person2);
+// console.log('person', person);
