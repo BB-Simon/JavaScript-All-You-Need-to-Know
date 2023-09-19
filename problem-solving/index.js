@@ -1415,3 +1415,21 @@ var romanToInt = function (s) {
 };
 
 // romanToInt("MCMXCIV")
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function (nums) {
+    let ans = 1;
+    for (let i = 1; i < nums.length; i++){
+        console.log(i);
+        if (nums[i] != nums[i - 1]) {
+            nums[ans] = nums[i];
+            ans++;
+        }
+    }
+    return ans;
+};
+
+const k = removeDuplicates([1, 1, 2]);
