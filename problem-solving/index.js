@@ -1433,3 +1433,27 @@ var removeDuplicates = function (nums) {
 };
 
 const k = removeDuplicates([1, 1, 2]);
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+const searchInsert = function (nums, target) {
+    // let output = nums.indexOf(target);
+    // if (output === -1) {
+    //     for (let i = 0; i < nums.length; i++) {
+    //         if (nums[i] >= target) {
+    //             output = i;
+    //             break
+    //         } else {
+    //             output = nums.length;
+    //         }
+    //     }
+    // }
+    // return output;
+    let i = nums.findIndex(n => n >= target);
+    return i > -1 ? i : nums.length;
+};
+
+searchInsert([1, 3, 5, 6], 7)
