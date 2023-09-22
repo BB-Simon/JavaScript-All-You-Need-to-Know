@@ -1457,3 +1457,12 @@ const searchInsert = function (nums, target) {
 };
 
 searchInsert([1, 3, 5, 6], 7)
+
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+var plusOne = function(digits) {
+    let x = (BigInt(digits.join("")) + 1n);
+    return x.toString().split("").map((y) => parseInt(y))
+};
