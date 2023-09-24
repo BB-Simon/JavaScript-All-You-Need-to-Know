@@ -1466,3 +1466,47 @@ var plusOne = function(digits) {
     let x = (BigInt(digits.join("")) + 1n);
     return x.toString().split("").map((y) => parseInt(y))
 };
+
+function fib(n){
+    if(n === 1) return 0;
+
+    if(n === 2) return 1;
+
+    let n1 = 0;
+    let n2 = 1;
+    let x;
+    let i = 2;
+
+    while(i <= n){
+        x = n1 + n2;
+        n1 = n2
+        n2 = x;
+        console.log(x);
+        i+= 1;
+    }
+}
+
+// fib(3)
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function (n) {
+    if (n <= 2) {
+        return n
+    }
+
+    let n1 = 1, n2 = 1, x;
+    let i = 2;
+    while (i <= n) {
+        console.log(i);
+        x = n1 + n2;
+        n1 = n2;
+        n2 = x;
+        i += 1;
+    }
+    return x;
+};
+
+// climbStairs(3)
