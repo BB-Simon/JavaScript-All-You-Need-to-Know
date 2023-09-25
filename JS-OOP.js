@@ -176,6 +176,7 @@ Today's topic: prototype
 // function Person(name, age) {
 //   this.name = name;
 //   this.age = age;
+//   this.x = 2;
 // }
 
 // Person.prototype.hello = function() {
@@ -198,10 +199,12 @@ Today's topic: prototype
 
 // var p1 = new Person("Simon", 24);
 // var p2 = new Person("Jimon", 22);
+// var p3 = new Person("tk", 22);
 
 // console.log(p1);
 // console.log(p2);
 // console.log(Person.prototype);
+
 /*Twinkle Cats, JavaScript OOP
 Lecture_5
 Today's topic: bind, call, apply Methods
@@ -316,26 +319,26 @@ var cat = myName(Animale, "Simon", "Jimon");
 *********************************************************/
 
 // Create Object
-const obj1 = {a: "A"}
-const obj2 = new Object();
-obj2.a = "A";
+// const obj1 = {a: "A"}
+// const obj2 = new Object();
+// obj2.a = "A";
 
-function ObjConstructor(a) {
-  this.a = a
-}
+// function ObjConstructor(a) {
+//   this.a = a
+// }
 
-ObjConstructor.prototype.b = "B";
-const obj3 = new ObjConstructor('A');
+// ObjConstructor.prototype.b = "B";
+// const obj3 = new ObjConstructor('A');
 
-const obj4 = Object.create(null);
-obj4.a = "A";
+// const obj4 = Object.create(null);
+// obj4.a = "A";
 
-function delay(ms) {
-  // your code
-  return new Promise((resolve, reject )=> {
-    setTimeout(resolve, ms)
-  })
-}
+// function delay(ms) {
+//   // your code
+//   return new Promise((resolve, reject )=> {
+//     setTimeout(resolve, ms)
+//   })
+// }
 
 // delay(3000).then(() => console.log('runs after 3 seconds'));
 

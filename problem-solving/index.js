@@ -1468,26 +1468,52 @@ var plusOne = function(digits) {
 };
 
 function fib(n){
-    if(n === 1) return 0;
-
-    if(n === 2) return 1;
-
-    let n1 = 0;
-    let n2 = 1;
-    let x;
-    let i = 2;
-
-    while(i <= n){
-        x = n1 + n2;
-        n1 = n2
-        n2 = x;
-        console.log(x);
-        i+= 1;
+    // if(n === 1) return 0;
+    // if(n === 2) return 1;
+    if(n <= 2){
+        return 1;
     }
+
+    // let n1 = 0;
+    // let n2 = 1;
+    // let x;
+    // let i = 0;
+
+    // while(i <= n){
+    //     x = n1 + n2;
+    //     n1 = n2
+    //     n2 = x;
+    //     console.log(x);
+    //     i+= 1;
+    // }
+    // for(let i = 2; i <= n; i++){
+    //     x = n1 + n2;
+    //     n1 = n2;
+    //     n2 = x;
+    // }
+    // console.log(n2);
+
+    return fib(n - 1) + fib(n - 2);
 }
 
-// fib(3)
+// 1, 2, 3, 4, 5 = 15;
 
+console.log(fib(4));
+
+function sum(n){
+    // let x = 0;
+    // for(let i = 1; i <=n; i++){
+    //     // console.log(i);
+    //     x+= i;
+    // }
+    if(n === 0){
+        return 1
+    }
+    return n * sum(n-1);
+
+}
+
+// console.log(sum(3));
 /**
  * @param {number} n
  * @return {number}
@@ -1510,3 +1536,19 @@ var climbStairs = function (n) {
 };
 
 // climbStairs(3)
+
+/**
+ * @param {string[]} operations
+ * @return {number}
+ */
+var finalValueAfterOperations = function (operations) {
+    let x = 0;
+    for (let i = 0; i < operations.length; i++) {
+        if (operations[i] === '++X' || operations[i] === 'X++') {
+            x += 1;
+        } else {
+            x -= 1;
+        }
+    }
+    return x;
+};
