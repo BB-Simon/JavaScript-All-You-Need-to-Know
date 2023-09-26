@@ -1568,3 +1568,19 @@ var balancedStringSplit = function (s) {
     }
     return split
 };
+
+/**
+ * @param {string} s
+ * @param {number[]} indices
+ * @return {string}
+ */
+var restoreString = function (s, indices) {
+    let obj = {};
+    let res = '';
+    for (let i = 0; i < s.length; i++) {
+        obj = { ...obj, [indices[i]]: s[i] }
+    }
+    Object.keys(obj).forEach((k) => res += obj[k]);
+
+    return res;
+};
