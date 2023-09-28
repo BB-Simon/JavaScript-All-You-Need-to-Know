@@ -1496,8 +1496,6 @@ function fib(n){
     return fib(n - 1) + fib(n - 2);
 }
 
-// 1, 2, 3, 4, 5 = 15;
-
 console.log(fib(4));
 
 function sum(n){
@@ -1592,3 +1590,88 @@ var restoreString = function (s, indices) {
 
     return arr.join('');
 };
+
+
+// **************** Linked List ********************
+class Node {
+    constructor(value, next_node = null){
+        this.value = value;
+        this.next_node = next_node;
+    }
+}
+
+// {value: 1, next_node: null}
+
+class Linkedlist {
+    constructor(){
+        this.head = null;
+        this.count = 0;
+    }
+    
+    add(n){
+        const node = new Node(n);
+        if(!this.head){
+            this.head = node;
+            return
+        }
+
+        let current = this.head;
+        while (current.next_node !== null){
+            current = current.next_node
+        }
+        
+        current.next_node = node;
+    }
+
+    removeByIndex(index) {
+        if(this.head === null){
+            return;
+        }
+
+        let i = 0;
+        let current = this.head;
+        let prev = null;
+
+        while(current.next_node && i < index){
+            prev = current;
+            current = current.next_node;
+            i++;
+        }
+
+        if(i < index){
+            return 'Index is out of range';
+        } else if(i === 0)  {
+            this.head = this.head.next_node;
+        } else {
+            prev.next_node = current.next_node;
+        }
+    }
+
+    length(h){
+
+        // **********Loop solution**********
+        // let count = 0;
+        // let temp = this.head;
+        // while(temp !== null){
+        //     count++;
+        //     temp = temp.next_node;
+        // }
+        // return count;
+
+        // *********** Recursive solution ************
+        if(h === null){
+            return 0;
+        }
+        
+        return 1 + this.length(h.next_node);
+    }
+}
+
+const list = new Linkedlist();
+list.add(3);
+list.add(4);
+list.add(5);
+console.log(list.head);
+list.removeByIndex(0)
+console.log(list.head);
+console.log(list.length(list.head));
