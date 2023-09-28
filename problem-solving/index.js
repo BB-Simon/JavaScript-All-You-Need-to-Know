@@ -1608,7 +1608,7 @@ class Linkedlist {
         this.count = 0;
     }
     
-    add(n){
+    push(n){
         const node = new Node(n);
         if(!this.head){
             this.head = node;
@@ -1621,6 +1621,12 @@ class Linkedlist {
         }
         
         current.next_node = node;
+    }
+
+    unshift(n) {
+        const node = new Node(n);
+        node.next_node = this.head
+        this.head = node;
     }
 
     removeByIndex(index) {
@@ -1668,10 +1674,11 @@ class Linkedlist {
 }
 
 const list = new Linkedlist();
-list.add(3);
-list.add(4);
-list.add(5);
+list.push(3);
+list.unshift(7);
+list.push(4);
+// list.push(5);
 console.log(list.head);
-list.removeByIndex(0)
-console.log(list.head);
-console.log(list.length(list.head));
+// list.removeByIndex(0)
+// console.log(list.head);
+// console.log(list.length(list.head));
