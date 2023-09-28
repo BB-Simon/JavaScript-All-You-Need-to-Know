@@ -1615,12 +1615,25 @@ class Linkedlist {
             return
         }
 
-        let current = this.head;
-        while (current.next_node !== null){
-            current = current.next_node
+        let last = this.head;
+        while (last.next_node){
+            last = last.next_node
         }
         
-        current.next_node = node;
+        last.next_node = node;
+    }
+
+    insertAfter(prev, n){
+        // console.log(prev);
+
+        const node = new Node(n);
+
+        let prevNode = this.head;
+        while(prevNode.value !== prev){
+            prevNode = prevNode.next_node
+        }
+        node.next_node = prevNode.next_node;
+        prevNode.next_node = node;
     }
 
     unshift(n) {
@@ -1674,9 +1687,11 @@ class Linkedlist {
 }
 
 const list = new Linkedlist();
+list.push(10);
 list.push(3);
-list.unshift(7);
+// list.unshift(7);
 list.push(4);
+list.insertAfter(3, 19)
 // list.push(5);
 console.log(list.head);
 // list.removeByIndex(0)
