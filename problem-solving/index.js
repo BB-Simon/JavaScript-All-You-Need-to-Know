@@ -1684,16 +1684,42 @@ class Linkedlist {
         
         return 1 + this.length(h.next_node);
     }
+
+    include(n, h){
+
+        // ********** Loop solution ***************
+        // let res = false;
+        // let current = this.head;
+        // while(current){
+        //     if(current.value === n) {
+        //         res = true;
+        //     }
+        //     current = current.next_node;
+        // }
+        // return res;
+
+        // ********** Recursive solution *********
+        if(h === null){
+            return false;
+        }
+
+        if(h.value === n){
+            return true;
+        }
+
+        return this.include(n, h.next_node)
+    }
 }
 
 const list = new Linkedlist();
 list.push(10);
 list.push(3);
-// list.unshift(7);
+list.unshift(7);
 list.push(4);
-list.insertAfter(3, 19)
+// list.insertAfter(3, 19)
 // list.push(5);
-console.log(list.head);
+// console.log(list.include(3, list.head));
+// console.log(list.head);
 // list.removeByIndex(0)
 // console.log(list.head);
 // console.log(list.length(list.head));
