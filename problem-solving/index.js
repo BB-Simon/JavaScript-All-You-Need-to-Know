@@ -1221,12 +1221,12 @@ function buildPalindrome(a, b) {
     }, '');
     if (bestPalyndrome === '') return -1;
 
-    console.log(bestPalyndrome);
+    // console.log(bestPalyndrome);
     return bestPalyndrome;
 
 }
 
-buildPalindrome('bac', 'bac')
+// buildPalindrome('bac', 'bac')
 
 
 /**
@@ -1423,7 +1423,7 @@ var romanToInt = function (s) {
 var removeDuplicates = function (nums) {
     let ans = 1;
     for (let i = 1; i < nums.length; i++){
-        console.log(i);
+        // console.log(i);
         if (nums[i] != nums[i - 1]) {
             nums[ans] = nums[i];
             ans++;
@@ -1432,7 +1432,7 @@ var removeDuplicates = function (nums) {
     return ans;
 };
 
-const k = removeDuplicates([1, 1, 2]);
+// const k = removeDuplicates([1, 1, 2]);
 
 /**
  * @param {number[]} nums
@@ -1496,7 +1496,7 @@ function fib(n){
     return fib(n - 1) + fib(n - 2);
 }
 
-console.log(fib(4));
+// console.log(fib(4));
 
 function sum(n){
     // let x = 0;
@@ -1592,134 +1592,3 @@ var restoreString = function (s, indices) {
 };
 
 
-// **************** Linked List ********************
-class Node {
-    constructor(value, next_node = null){
-        this.value = value;
-        this.next_node = next_node;
-    }
-}
-
-// {value: 1, next_node: null}
-
-class Linkedlist {
-    constructor(){
-        this.head = null;
-        this.count = 0;
-    }
-    
-    push(n){
-        const node = new Node(n);
-        if(!this.head){
-            this.head = node;
-            return
-        }
-
-        let last = this.head;
-        while (last.next_node){
-            last = last.next_node
-        }
-        
-        last.next_node = node;
-    }
-
-    insertAfter(prev, n){
-        // console.log(prev);
-
-        const node = new Node(n);
-
-        let prevNode = this.head;
-        while(prevNode.value !== prev){
-            prevNode = prevNode.next_node
-        }
-        node.next_node = prevNode.next_node;
-        prevNode.next_node = node;
-    }
-
-    unshift(n) {
-        const node = new Node(n);
-        node.next_node = this.head
-        this.head = node;
-    }
-
-    removeByIndex(index) {
-        if(this.head === null){
-            return;
-        }
-
-        let i = 0;
-        let current = this.head;
-        let prev = null;
-
-        while(current.next_node && i < index){
-            prev = current;
-            current = current.next_node;
-            i++;
-        }
-
-        if(i < index){
-            return 'Index is out of range';
-        } else if(i === 0)  {
-            this.head = this.head.next_node;
-        } else {
-            prev.next_node = current.next_node;
-        }
-    }
-
-    length(h){
-
-        // **********Loop solution**********
-        // let count = 0;
-        // let temp = this.head;
-        // while(temp !== null){
-        //     count++;
-        //     temp = temp.next_node;
-        // }
-        // return count;
-
-        // *********** Recursive solution ************
-        if(h === null){
-            return 0;
-        }
-        
-        return 1 + this.length(h.next_node);
-    }
-
-    include(n, h){
-
-        // ********** Loop solution ***************
-        // let res = false;
-        // let current = this.head;
-        // while(current){
-        //     if(current.value === n) {
-        //         res = true;
-        //     }
-        //     current = current.next_node;
-        // }
-        // return res;
-
-        // ********** Recursive solution *********
-        if(h === null){
-            return false;
-        }
-
-        if(h.value === n){
-            return true;
-        }
-
-        return this.include(n, h.next_node)
-    }
-}
-
-const list = new Linkedlist();
-list.push(10);
-list.push(3);
-list.unshift(7);
-list.push(4);
-// list.insertAfter(3, 19)
-// list.push(5);
-// console.log(list.include(3, list.head));
-// console.log(list.head);
-// list.removeByIndex(0)
-// console.log(list.head);
-// console.log(list.length(list.head));
