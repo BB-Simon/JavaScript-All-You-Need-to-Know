@@ -158,12 +158,30 @@ class Linkedlist {
     }
     temp.next_node = null;
   }
+
+  getNth(head, index) {
+    //code here
+    let count = 0;
+    let current = head;
+    while (current) {
+      if (count == index) {
+        return current.value;
+      }
+      count++;
+      current = current.next_node;
+    }
+    // assert(false);
+    return -1;
+
+  }
 }
 
 const list = new Linkedlist();
 list.push(10);
 list.push(3);
-list.push(5); 
+list.push(5);
+// console.log(list.getNth(list.head, 0));
+
 // list.unshift(7);
 // console.log(list.head);
 // list.reverse(list.head);
