@@ -222,18 +222,34 @@ class Linkedlist {
     return count;
   }
 
+  printMiddle(){
+    if(this.head !== null){
+      let len = 0;
+      let temp = this.head;
+      while (temp) {
+        temp = temp.next_node;
+        len++;
+      }
+
+      let midIdx = parseInt(len / 2);
+      temp = this.head
+      while (midIdx !== 0) {
+        temp = temp.next_node;
+        midIdx--;
+      }
+
+      return temp.value;
+    }
+    
+    return -1;
+  }
+
 }
 
 const list = new Linkedlist();
-list.push(10);
+list.push(1);
+list.push(2);
 list.push(3);
-list.push(5);
-list.push(10);
-list.push(10);
-list.push(5);
-list.push(3);
-list.push(5);
-list.countOfOccurrences(10);
 
 // list.unshift(7);
 // console.log(list.head);
