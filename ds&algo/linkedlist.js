@@ -208,12 +208,32 @@ class Linkedlist {
     }
     return -1;
   }
+
+  countOfOccurrences(n){
+    let count = 0;
+
+    let temp = this.head;
+    while(temp){
+      if(temp.value === n){
+        count++;
+      }
+      temp = temp.next_node;
+    }
+    return count;
+  }
+
 }
 
 const list = new Linkedlist();
 list.push(10);
 list.push(3);
 list.push(5);
+list.push(10);
+list.push(10);
+list.push(5);
+list.push(3);
+list.push(5);
+list.countOfOccurrences(10);
 
 // list.unshift(7);
 // console.log(list.head);
