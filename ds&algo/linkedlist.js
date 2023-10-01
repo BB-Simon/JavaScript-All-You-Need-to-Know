@@ -160,19 +160,53 @@ class Linkedlist {
   }
 
   getNth(head, index) {
-    //code here
-    let count = 0;
-    let current = head;
-    while (current) {
-      if (count == index) {
-        return current.value;
-      }
-      count++;
-      current = current.next_node;
-    }
-    // assert(false);
-    return -1;
+    // ************ Loop solution ***********
+    // let count = 0;
+    // let current = head;
+    // while (current) {
+    //   if (count == index) {
+    //     return current.value;
+    //   }
+    //   count++;
+    //   current = current.next_node;
+    // }    
+    // return -1;
 
+    // ********* Recuserive solution
+    let count = 0;
+    if(head){
+      if (count === index) {
+        return head.value;
+      }
+
+      return this.getNth(head.next_node, index - 1);
+    }
+
+    return  -1;
+  }
+
+  printNthFromLast(n){
+    let len = 0;
+    let temp = this.head;
+
+    while(temp){
+      temp = temp.next_node;
+      len++;
+    }
+    
+    if(n > len ){
+      return -1;
+    }
+    
+    temp = this.head;
+
+    for(let i = 0; i < (len - n); i++){
+      temp = temp.next_node;
+    }
+    if(temp){
+      return temp.value
+    }
+    return -1;
   }
 }
 
@@ -180,7 +214,6 @@ const list = new Linkedlist();
 list.push(10);
 list.push(3);
 list.push(5);
-// console.log(list.getNth(list.head, 0));
 
 // list.unshift(7);
 // console.log(list.head);
