@@ -33,4 +33,18 @@ function reverseStr(str) {
 }
 
 let str = 'simon'
-reverseStr(str)
+// reverseStr(str)
+
+function search(n){
+  let arr = [1, 2, 3,, 4, 5, 6,]
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === n){
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+// console.log(search(12));
