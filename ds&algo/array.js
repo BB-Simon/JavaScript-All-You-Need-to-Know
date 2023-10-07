@@ -48,3 +48,17 @@ function search(n){
 }
 
 // console.log(search(12));
+
+function insertElement(arr, pos, element){
+  const n = arr.length;
+
+  for(let i = n - 1; i >= pos; i--){
+    arr[i + 1] = arr[i];
+  }
+  arr[pos] = element;
+
+  return arr;
+}
+
+const arr = insertElement([1, 23, 45, 54, 6], 1, 50);
+console.log(arr);
