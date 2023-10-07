@@ -35,8 +35,8 @@ function reverseStr(str) {
 let str = 'simon'
 // reverseStr(str)
 
-function search(n){
-  let arr = [1, 2, 3,, 4, 5, 6,]
+function search(arr, n){
+  // let arr = [1, 2, 3,, 4, 5, 6,]
 
   for(let i = 0; i < arr.length; i++){
     if(arr[i] === n){
@@ -60,5 +60,21 @@ function insertElement(arr, pos, element){
   return arr;
 }
 
-const arr = insertElement([1, 23, 45, 54, 6], 1, 50);
-console.log(arr);
+// const arr = insertElement([1, 23, 45, 54, 6], 1, 50);
+
+function removeElement(arr, element){
+  const pos = search(arr, element);
+  if(pos === -1){
+    console.log('Element not found');
+    return;
+  }
+
+  for(let i = pos; i < arr.length; i++){
+    console.log(i);
+    arr[i] = arr[i + 1]
+  }
+  arr.length = arr.length - 1
+}
+
+const arr = [1, 23, 24, 45, 54, 6];
+removeElement(arr, 24);
