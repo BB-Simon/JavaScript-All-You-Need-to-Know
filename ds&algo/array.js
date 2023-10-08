@@ -70,11 +70,38 @@ function removeElement(arr, element){
   }
 
   for(let i = pos; i < arr.length; i++){
-    console.log(i);
     arr[i] = arr[i + 1]
   }
   arr.length = arr.length - 1
 }
 
-const arr = [1, 23, 24, 45, 54, 6];
-removeElement(arr, 24);
+// const arr = [1, 23, 24, 45, 54, 6];
+// removeElement(arr, 24);
+
+/** 
+  Search in sorted array wtib binary search algorithm
+  @arr Array
+  @element Element to find
+  @return: Number Position of targeted element in the array
+**/
+function searchInSortedArray(arr, low, high, element){
+  if(high < low){
+    return -1;
+  }
+  let mid = Math.trunc((low + high) / 2);
+
+  if (element === arr[mid]){
+    return mid
+  }
+  
+  if (element > arr[mid]){
+    return searchInSortedArray(arr, (mid + 1), high, element)
+  }
+
+  if(element < arr[mid]){
+    return searchInSortedArray(arr, low, (mid - 1), element)
+  }
+}
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+// const idx = searchInSortedArray(arr, 0, arr.length - 1, 19);
