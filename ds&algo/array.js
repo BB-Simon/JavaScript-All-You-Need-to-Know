@@ -88,8 +88,8 @@ function searchInSortedArray(arr, low, high, element){
   if(high < low){
     return -1;
   }
-  let mid = Math.trunc((low + high) / 2);
 
+  let mid = Math.trunc((low + high) / 2);
   if (element === arr[mid]){
     return mid
   }
@@ -104,4 +104,16 @@ function searchInSortedArray(arr, low, high, element){
 }
 
 // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-// const idx = searchInSortedArray(arr, 0, arr.length - 1, 19);
+// const idx = searchInSortedArray(arr, 0, arr.length - 1, -23);
+
+function insertInSortedArray(arr, element) {
+  let n = arr.length -1;
+  let i;
+  for(i = n; (i >= 0 && arr[i] > element); i--) {
+    arr[i + 1] = arr[i];
+  }
+  arr[i + 1] = element;
+}
+
+// const arr = [1, 2, 3, 4, 6, 7];
+// insertInSortedArray(arr, 17)
