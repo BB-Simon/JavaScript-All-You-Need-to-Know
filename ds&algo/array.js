@@ -117,3 +117,22 @@ function insertInSortedArray(arr, element) {
 
 // const arr = [1, 2, 3, 4, 6, 7];
 // insertInSortedArray(arr, 17)
+
+function printSubArrays(arr, start, end) {
+  if (end === arr.length){
+    return;
+  } else if(start > end){
+    printSubArrays(arr, 0, end + 1);
+  } else {
+    // console.log(arr[start:end+1]);
+    let a = []
+    for(let i = start; i < end; i++){
+      a.push(arr[i])
+    }
+    a.push(arr[end]);
+    console.log(a);
+    printSubArrays(arr, start + 1, end)
+  }
+}
+
+const arr = printSubArrays([1, 2], 0, 0)
