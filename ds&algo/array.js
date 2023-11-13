@@ -130,9 +130,58 @@ function printSubArrays(arr, start, end) {
       a.push(arr[i])
     }
     a.push(arr[end]);
-    console.log(a);
+    // console.log(a);
     printSubArrays(arr, start + 1, end)
   }
 }
 
 const arr = printSubArrays([1, 2], 0, 0)
+
+function print3largest(arr){
+  // arr.sort((a, b) => a - b).reverse();
+  // console.log(arr[0]);
+  // console.log(arr[1]);
+  // console.log(arr[2]);
+
+  // arr.sort((a, b) => a - b);
+  // let count = 1, check = 0;
+  // for(let i = 1; i <= arr.length; i++){
+  //   if(count < 4){
+  //     if (check !== arr[arr.length - i]){
+  //       console.log(arr[arr.length - i]);
+  //       check = arr[arr.length - i];
+  //       count++;
+  //     }
+  //   } else {
+  //     break;
+  //   }
+  // }
+
+  let first, second, third;
+
+  if(arr.length < 3){
+    return;
+  }
+
+  third = first = second = Number.MIN_VALUE;
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > first){
+      third = second;
+      second = first;
+      first = arr[i];
+    } else if(arr[i] > second && arr[i] !== first){
+      third = second;
+      second = arr[i];
+    } else if(arr[i] > third && arr[i] !== second){
+      third = arr[i];
+    }
+  }
+
+  // console.log(first);
+  // console.log(second);
+  // console.log(third);
+}
+
+print3largest([12, 45, 1, -1, 45, 54, 45, 45, 45, 23, 5, 0, -10])
+
