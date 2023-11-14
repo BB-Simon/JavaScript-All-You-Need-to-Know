@@ -183,5 +183,44 @@ function print3largest(arr){
   // console.log(third);
 }
 
-print3largest([12, 45, 1, -1, 45, 54, 45, 45, 45, 23, 5, 0, -10])
+// print3largest([12, 45, 1, -1, 45, 54, 45, 45, 45, 23, 5, 0, -10])
 
+function printSecondLargestElementInArray(arr){
+  if(arr.length < 2){
+    console.log('Invalid');
+    return;
+  }
+
+  // arr.sort((a,  b) => a - b);
+  // for(var i = (arr.length - 2); i >= 0; i--){
+  //   console.log(i);
+  //   if(arr[i] !== arr[arr.length - 1]) {
+  //     console.log(arr[i]);
+  //     return;
+  //   }
+  // }
+
+  // Set datastructure
+  // let s = new Set(arr);
+  // let v = Array.from(s);
+  // v.sort((a, b) => a - b);
+  // console.log(v[v.length - 2]);
+
+  let count = {}
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] in count){
+      count[arr[i]] += 1;
+    } else {
+      count[arr[i]] = 1;
+    }
+  }
+
+  if(count.length === 1) {
+    console.log('invalid');
+    return;
+  }
+  let keys = Object.keys(count)
+  // console.log(keys[keys.length - 2]);
+}
+
+// printSecondLargestElementInArray([12, 3, 45, 3, 25, 34, 25, 44, 44])
