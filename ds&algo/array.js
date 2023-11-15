@@ -224,3 +224,35 @@ function printSecondLargestElementInArray(arr){
 }
 
 // printSecondLargestElementInArray([12, 3, 45, 3, 25, 34, 25, 44, 44])
+
+// Utility function to swap two elements of an array 
+function swap(arr, j, i) {
+  let temp = arr[j];
+  arr[j] = arr[i];
+  arr[i] = temp;
+}
+
+function pushZerosToEnd(arr){
+  // let count = 0;
+  // for(let i = 0; i < arr.length; i++){
+  //   if(arr[i] !== 0){
+  //     arr[count] = arr[i];
+  //     count++;
+  //   }
+  // }
+  
+  // while(count < arr.length){
+  //   arr[count] = 0;
+  //   count+=1;
+  // }
+
+  let j = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] !== 0){
+      swap(arr, j, i)
+      j+=1;
+    }
+  }
+}
+
+// pushZerosToEnd([0, 1,2,43, 41, 23, 0, 23, 2, 3, 0, 1, 6, 4, 0])
