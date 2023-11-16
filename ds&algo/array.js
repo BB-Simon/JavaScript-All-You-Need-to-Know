@@ -256,3 +256,28 @@ function pushZerosToEnd(arr){
 }
 
 // pushZerosToEnd([0, 1,2,43, 41, 23, 0, 23, 2, 3, 0, 1, 6, 4, 0])
+
+
+function sortArrayInWave(arr){
+  // arr.sort((a, b) => a - b);
+  // for(var i = 0; i < arr.length - 1; i+=2){
+  //   let temp = arr[i];
+  //   arr[i] = arr[i+1];
+  //   arr[i+1] = temp;
+  // }
+
+  for(let i = 0; i < arr.length; i+=2){
+    if(arr[i] < arr[i - 1]){
+      let temp = arr[i];
+      arr[i] = arr[i - 1];
+      arr[i - 1] = temp;
+    } else if(arr[i] < arr[i + 1]) {
+      let temp = arr[i];
+      arr[i] = arr[i + 1];
+      arr[i + 1] = temp;
+    }
+  }
+  return arr;
+}
+
+// sortArrayInWave([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
