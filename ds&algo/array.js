@@ -281,3 +281,26 @@ function sortArrayInWave(arr){
 }
 
 // sortArrayInWave([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+
+/**
+ * Sort an array which contain 1 to n values
+ * @param {*} arr 
+ * @returns sorted array
+ */
+function sort(arr){
+  let i = 0;
+  while(i < arr.length){
+    let correct = arr[i] - 1;
+    if(arr[correct] !== arr[i]){
+      let temp = arr[i];
+      arr[i] = arr[correct];
+      arr[correct] = temp;
+    } else {
+      i = i+1
+    }
+  }
+  return arr;
+}
+
+// sort([3, 2, 5, 6, 1, 4])
