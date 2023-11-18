@@ -285,7 +285,7 @@ function sortArrayInWave(arr){
 
 /**
  * Sort an array which contain 1 to n values
- * @param {*} arr 
+ * @param {*Array} arr 
  * @returns sorted array
  */
 function sort(arr){
@@ -304,3 +304,21 @@ function sort(arr){
 }
 
 // sort([3, 2, 5, 6, 1, 4])
+
+function findSingle(arr){
+  for(let i=0; i<arr.length; i++){
+    let count = 0;
+    for(let j=0; j<arr.length; j++){
+      if(arr[i] == arr[j]){
+        count++;
+      }
+    }
+    if (count === 1) {
+      return arr[i];
+    }
+  }
+
+  return -1;
+}
+
+// let el = findSingle([2, 3, 5, 1,1,2, 6, 6, 9])
