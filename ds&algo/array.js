@@ -322,3 +322,31 @@ function findSingle(arr){
 }
 
 // let el = findSingle([2, 3, 5, 1,1,2, 6, 6, 9])
+
+function leaderInArray(arr){
+  // for(let i = 0; i < arr.length; i++){
+  //   let j;
+  //   for(j = i + 1; j < arr.length; j++){
+  //     if(arr[i] <= arr[j]) {
+  //      break
+  //     }
+  //   }
+    
+  //   if(j === arr.length){
+  //     console.log(arr[i]);
+  //   }
+  // }
+
+  const ans = []
+  let max_from_right = arr[arr.length - 1];
+  ans.unshift(max_from_right);
+
+  for(let i = arr.length - 2; i >=0; i--){
+    if(max_from_right < arr[i]){
+      max_from_right = arr[i];
+      ans.unshift(max_from_right);
+    }
+  }
+}
+
+// leaderInArray([2, 4, 12, 45, 23, 43, 21, 12])
