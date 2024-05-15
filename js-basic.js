@@ -637,7 +637,7 @@ function groupBy(objectArray, property) {
       
 }
 let groupedPeople = groupBy(people, 'age')
-console.log(groupedPeople);
+// console.log(groupedPeople);
 
 // ****************Title Case a Sentence**************
 // Return the provided string with the first letter of each word capitalized.
@@ -858,3 +858,51 @@ console.log(groupedPeople);
 //   });
 // }
 // printChildrenRecursive(parent);
+
+
+// ........... Map and WeakMap.................
+
+const myMap = new Map();
+
+myMap.set('isMaried', true);
+myMap.set('info', {name: "Simon", age: 31});
+
+// console.log({map: myMap.get('isMaried')})
+// console.log({map: myMap.get('info')})
+
+
+const x = 12;
+const y = {z: 15};
+
+function findXy (n1, n2){
+  n1 = 20;
+  n2.z = 25;
+  return {n1, n2};
+}
+
+// console.log({fn: findXy(x, y), x, y})
+
+// console.log(this)
+
+
+function* fibinacci() {
+  let prev = 0;
+  let next = 1;
+
+  yield prev;
+  yield next;
+
+  while(true) {
+    const newValue = prev + next;
+    yield newValue;
+
+    prev = next;
+    next = newValue;
+  }
+}
+
+const fib = fibinacci();
+
+// for(var i = 0; i <= 8; i++){
+//   console.log(fib.next().value);
+// }
