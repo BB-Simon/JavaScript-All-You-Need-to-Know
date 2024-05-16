@@ -906,3 +906,88 @@ const fib = fibinacci();
 // for(var i = 0; i <= 8; i++){
 //   console.log(fib.next().value);
 // }
+
+
+// function createUser (name, age) {
+//   const obj = {};
+//   obj.name = name;
+//   obj.age = age;
+//   return obj;
+// }
+
+// const simon = createUser('simon', 34);
+// const hasan = createUser('hasan', 28);
+// console.log({simon, hasan});
+
+// function User(name, age) {
+//   this.name = name
+//   this.age = age
+
+//   this.intoducrSelf = function(){
+//     console.log(`Hello my name is ${this.name} and I am ${this.age} years old.`)
+//   }
+// }
+
+// let simon = new User('Simon', 34);
+// // const hasan = new User('Hasan', 25);
+
+// const newPrototype = {
+//   sayHello(){
+//     console.log(`hello ${this.name}`);
+//   }
+// }
+
+// Object.assign(User.prototype, newPrototype);
+
+
+ class Person {
+  constructor(name){
+    this.name = name
+  }
+  introduceSelf(){
+    console.log(`Hello, My name is ${this.name}`)
+  }
+ }
+
+//  const simon = new Person();
+
+ class Professor extends Person {
+  constructor(name, teaches){
+    super(name);
+    this.teaches = teaches;
+  }
+
+  introduceSelf(){
+    console.log(`Hello, I am professor ${this.name}, I will be teaching you ${this.teaches} subject`);
+  }
+
+  grade(){
+    const grade = Math.floor(Math.random() * 100);
+    console.log(grade)
+  }
+ }
+
+//  const simon = new Professor('Simon', 'Math');
+//  simon.introduceSelf();
+//  simon.grade();
+
+class Student extends Person {
+  #year;
+
+  constructor(name, year){
+    super(name)
+    this.#year = year;
+  }
+
+  introduceSelf() {
+    const haveFriends = this.#hasFriends() ? 'I have friends' : 'I would like make some friends';
+    console.log(`Hello, I am ${this.name}, and i'm in year ${this.#year} and ${haveFriends}`);
+  }
+
+  #hasFriends() {
+    return this.#year.toLowerCase() === 'art';
+  }
+}
+
+// const hasan = new Student('Hasan', 'Art');
+// hasan.introduceSelf();
