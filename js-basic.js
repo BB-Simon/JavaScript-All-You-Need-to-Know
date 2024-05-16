@@ -991,3 +991,59 @@ class Student extends Person {
 
 // const hasan = new Student('Hasan', 'Art');
 // hasan.introduceSelf();
+
+// ****************asynchronous JavaScript
+// function makeGreet(name){
+//   return `Hello ${name}`;
+// }
+// const name = 'Simon';
+// const greet = makeGreet(name);
+
+// function step1 (n){
+//   return n + 1;
+// }
+// function step2 (n){
+//   return n + 2;
+// }
+// function step3 (n){
+//   return n + 3;
+// }
+
+
+// function stepsResult () {
+//   let result = 0;
+//   result = step1(result);
+//   result = step2(result);
+//   result = step3(result);
+
+//   return `result is ${result}`;
+// }
+
+function step1 (n, cb){
+  const res =  n + 1;
+  cb(res)
+}
+function step2 (n, cb){
+  const res = n + 2;
+  cb(res)
+}
+function step3 (n, cb){
+  const res = n + 3;
+  cb(res)
+}
+
+
+function stepsResult () {
+  step1(0, (res1) => {
+    step2(res1, (res2) => {
+      step3(res2, (res3) => {
+        console.log(`result is ${res3}`)
+      })
+    })
+  })
+}
+
+// stepsResult();
+
+
+
