@@ -288,22 +288,22 @@ function sortArrayInWave(arr){
  * @param {*Array} arr 
  * @returns sorted array
  */
-function sort(arr){
-  let i = 0;
-  while(i < arr.length){
-    let correct = arr[i] - 1;
-    if(arr[correct] !== arr[i]){
-      let temp = arr[i];
-      arr[i] = arr[correct];
-      arr[correct] = temp;
-    } else {
-      i = i+1
-    }
-  }
-  return arr;
-}
+// function sort(arr){
+//   let i = 0;
+//   while(i < arr.length){
+//     let correct = arr[i] - 1;
+//     if(arr[correct] !== arr[i]){
+//       let temp = arr[i];
+//       arr[i] = arr[correct];
+//       arr[correct] = temp;
+//     } else {
+//       i = i+1
+//     }
+//   }
+//   return arr;
+// }
 
-// sort([3, 2, 5, 6, 1, 4])
+// // sort([3, 2, 5, 6, 1, 4])
 
 function findSingle(arr){
   for(let i=0; i<arr.length; i++){
@@ -350,3 +350,22 @@ function leaderInArray(arr){
 }
 
 // leaderInArray([2, 4, 12, 45, 23, 43, 21, 12])
+
+
+function sort(arr) {
+  let i = 0;
+  while (i < arr.length) {
+    let correct = arr[i] - 1;
+    console.log(correct);
+    if (arr[correct] !== arr[i]) {
+      let temp = arr[i];
+      arr[i] = arr[correct];
+      arr[correct] = temp;
+    } else {
+      i = i + 1
+    }
+  }
+  return arr;
+}
+
+console.log(sort([3, 2, 5, 6, 1, 4]))

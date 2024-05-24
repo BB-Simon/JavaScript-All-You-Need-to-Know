@@ -1046,4 +1046,48 @@ function stepsResult () {
 // stepsResult();
 
 
+function sum(arr){
+  if (arr.length === 0) {
+    return 0;
+  }
 
+  return arr[0] + sum(arr.slice(1))
+}
+
+// console.log({ res: sum([2, 3, 4, 1]) })
+
+function exponential(num, power) {
+
+  if (power === 1) {
+    return num;
+  }
+  else {
+    return num * exponential(num, power - 1);
+  }
+}
+
+// console.log(exponential(3, 4))
+
+///=== Sorting can be done by recurssion===
+
+// function list  = merge(list1, list2)
+// list_1_position = 1;
+// list_2_position = 1;
+// list_position = 1;
+
+// list = zeros(1, length(list_1) + length(list_2));
+
+// if (list_1_position > length(list1))
+//   list(list_position) = list_2(list_2_position);
+// list_2_position = list_2_position + 1;
+//        else if (list_2_position > length(list2))
+//   list(list_position) = list_1(list_1_position);
+// list_1_position = list_1_position + 1;
+//        else if (list1(list_1_position) > list2(list_2_position))
+//   list(list_position) = list_1(list_1_position);
+// list_1_position = list_1_position + 1;
+//        else
+// list(list_position) = list_2(list_2_position);
+// list_2_position = list_2_position + 1;
+// end
+end

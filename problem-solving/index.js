@@ -1524,7 +1524,6 @@ var climbStairs = function (n) {
     let n1 = 1, n2 = 1, x;
     let i = 2;
     while (i <= n) {
-        console.log(i);
         x = n1 + n2;
         n1 = n2;
         n2 = x;
@@ -1533,7 +1532,7 @@ var climbStairs = function (n) {
     return x;
 };
 
-// climbStairs(3)
+// climbStairs(5)
 
 /**
  * @param {string[]} operations
@@ -1592,3 +1591,26 @@ var restoreString = function (s, indices) {
 };
 
 
+/** 
+ * Complete the 'jumpingOnClouds' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY c as parameter.
+ */
+function jumpingOnClouds(c) {
+    // Write your code here
+    let jumps = 0;
+
+    for (let i = 0; i < c.length - 1;) {
+        if (c[i + 2] === 0) {
+            jumps++;
+            i += 2
+        } else {
+            jumps++;
+            i += 1
+        }
+    }
+    return jumps;
+}
+
+// jumpingOnClouds([0, 0, 0, 0, 1, 0])

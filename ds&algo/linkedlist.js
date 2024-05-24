@@ -25,21 +25,25 @@ class Linkedlist {
     while (last.next_node) {
       last = last.next_node
     }
-
     last.next_node = node;
   }
 
   insertAfter(prev, n) {
-    // console.log(prev);
+    // {value: 1, next_node: null}
+    // {value: 1, next_node: {value: 2, next_node: null}}
+    // {value: 1, next_node: {value: 2, next_node: {value: 4, next_node: null}}}
 
-    const node = new Node(n);
+    // { value: 3, next_node: null }
 
-    let prevNode = this.head;
-    while (prevNode.value !== prev) {
-      prevNode = prevNode.next_node
+    const newNode = new Node(n);
+
+    let currentNode = this.head;
+    while(currentNode.value !== prev){
+      currentNode = currentNode.next_node;
     }
-    node.next_node = prevNode.next_node;
-    prevNode.next_node = node;
+
+    newNode.next_node = currentNode.next_node;
+    currentNode.next_node = newNode;
   }
 
   unshift(n) {
@@ -248,8 +252,12 @@ class Linkedlist {
 
 const list = new Linkedlist();
 list.push(1);
-list.push(2);
 list.push(3);
+list.push(4);
+list.insertAfter(1, 2);
+list.unshift(0);
+
+console.log(list)
 
 // list.unshift(7);
 // console.log(list.head);
