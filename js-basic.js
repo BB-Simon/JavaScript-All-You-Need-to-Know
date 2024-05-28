@@ -1090,4 +1090,28 @@ function exponential(num, power) {
 // list(list_position) = list_2(list_2_position);
 // list_2_position = list_2_position + 1;
 // end
-end
+// end
+
+
+/*
+ * Complete the 'migratoryBirds' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+
+function migratoryBirds(arr) {
+  // Write your code here
+  const counts = {};
+
+  for(let id of arr){
+    counts[id] = counts[id] ? counts[id] + 1 : 1;
+  }
+
+  const max = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+
+  return max[0][0]
+}
+
+// [1, 4, 4, 4, 5, 3]
+// migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4])
