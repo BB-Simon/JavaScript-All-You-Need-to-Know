@@ -1526,6 +1526,17 @@ var climbStairs = function (n) {
     while (i <= n) {
         x = n1 + n2;
         n1 = n2;
+        /*
+ * Complete the 'dayOfProgrammer' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts INTEGER year as parameter.
+ */
+
+function dayOfProgrammer(year) {
+    // Write your code here
+
+}
         n2 = x;
         i += 1;
     }
@@ -1614,3 +1625,39 @@ function jumpingOnClouds(c) {
 }
 
 // jumpingOnClouds([0, 0, 0, 0, 1, 0])
+
+/*
+ * Complete the 'dayOfProgrammer' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts INTEGER year as parameter.
+ */
+
+function dayOfProgrammer(year) {
+    // Write your code here
+    const getDay = () => {
+        if (year === 1918) return 26;
+        if (year % 4 === 0) {
+            if (year < 1919 || year % 400 === 0 || year % 100 !== 0) {
+                return 12
+            };
+        }
+        return 13;
+    }
+    return `${getDay()}.09.${year}`;
+}
+
+// console.log(dayOfProgrammer(2017))
+
+
+function stringOccerences(str, n) {
+    const counts = {};
+
+    for(let i = 0; i < str.length; i++){
+        counts[str[i]] = counts[str[i]] ? counts[str[i]] + 1 : 1; 
+    }
+    console.log(counts);
+    return counts[n];
+}
+
+// console.log(stringOccerences('ssiiimonnnnn', 'n'))
