@@ -1661,3 +1661,57 @@ function stringOccerences(str, n) {
 }
 
 // console.log(stringOccerences('ssiiimonnnnn', 'n'))
+
+/*
+ * Complete the 'biggerIsGreater' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING w as parameter.
+ */
+
+function biggerIsGreater(w) {
+    // Write your code here
+    // w = list(w)
+    // d = {}
+
+    // for i in range(len(w) - 1, 0, -1):
+    //     if ord(w[i]) not in d:
+    //         d[ord(w[i])] = i
+    //     if ord(w[i]) > ord(w[i - 1]):
+    //         swap = ord(w[i - 1]) + 1
+    //         while swap not in d:
+    //         swap += 1
+    //         j = d[swap]
+            // w[i - 1], w[j] = w[j], w[i - 1]
+            // w[i:] = w[i:][:: -1]
+            // return ''.join(w)
+
+    // return 'no answer'
+
+    let chars = w.split('');
+    const charCodes = {};
+    for(let i = w.length - 1; i >= 0; i--){
+        if (!charCodes[w[i].charCodeAt()]) {
+            charCodes[w[i].charCodeAt()] = i;
+        } 
+
+        if (w[i].charCodeAt() > w[i - 1]?.charCodeAt()){ 
+            let swap = w[i - 1].charCodeAt() + 1;
+            while (!charCodes[swap]){
+                swap+=1;
+            }
+            let j = charCodes[swap];
+            [chars[i - 1], chars[j]] = [chars[j], chars[i - 1]]
+            let lastIdx = chars[i];
+            chars[i] = chars[chars.length - 1];
+            chars[chars.length - 1] = lastIdx;
+            return chars.join('')
+        }
+    }
+
+    return 'no answer'
+}
+
+biggerIsGreater('xildrrhpca');
+
+
