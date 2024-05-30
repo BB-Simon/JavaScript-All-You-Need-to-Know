@@ -70,6 +70,7 @@
 // var result = bass(2)(10);
 // document.write(result);
 
+
 // *********** for loop concept *********
 // // for (var i = 1; i <= 100; i++) {
 // //     if(i % 2 === 1) {
@@ -84,6 +85,35 @@
 // //   sum += i;
 // // }
 // // document.write('result = ' + sum + "<br>");
+
+
+// const duplicate = (str, n) => {
+//   return n < 1 ? "" : `${n} ${str}` + duplicate(str, n - 1)
+// };
+
+// console.log(duplicate('Hello\n', 4))
+
+// const withLog = (fn) => {  
+// 	return (...args) => {  
+// 		console.log(`calling ${fn.name}`);  
+//     console.log(`All args ${typeof args}`);  
+// 		return fn(...args);  
+// 	};  
+// }
+
+// const add = (a, b) => a + b;
+// const addWithLogging = withLog(add);
+// const res = addWithLogging(3, 4);
+// console.log(res)
+// calling add
+// 7
+
+// const range = (a, b) => a > b ? [] : [a, ...range(a + 1, b)];
+// console.log(range(1, 5))
+// const multiply = arr => arr.reduce((p, a) => p * a);
+// const factorial = n => multiply(range(1, n));
+// console.log(factorial(5))
+// console.log(factorial(6))
 
 // ***************Twinkle Cats , Lecture -3***********
 // *************** Todays topic= Inner function ******
@@ -170,6 +200,50 @@
 
 // var a = caller('Simon')();
 // document.write(a);
+
+let value = 1;
+
+function doSomething(cb){
+  cb()
+}
+doSomething(() => {
+  value = 2;
+});
+
+// console.log(value);
+
+// function sayGoodbye(name){
+//   console.log('Goodbye ' + name + ' for today');
+// }
+
+// function sayHello(name, cb){
+//   console.log('Hello ' + name);
+//   cb(name);
+// }
+
+// sayHello('Simon', sayGoodbye)
+
+// function createCounter(){
+//   let x = 0;
+//   return function(){
+//     return x+=1;
+//   }
+// }
+
+// const counter = createCounter();
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
 
 // *******************Twinkle cats , Lecture _6*********************
 // *******************todays topic = Call Back Function*************
