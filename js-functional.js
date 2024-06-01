@@ -642,9 +642,22 @@ doSomething(() => {
 
 // console.log(JSON.stringify(ratings));
 
-function checkName(name){
-  if(name === "Simon"){
-    console.log(`Hello ${name}`);
-  }
-  console.log('Hello There!');
-}
+// function checkName(name){
+//   if(name === "Simon"){
+//     console.log(`Hello ${name}`);
+//   }
+//   console.log('Hello There!');
+// }
+
+// x = 5;
+// console.log(x);
+// var x;
+
+// var x = 5; // Initialize x
+// var y = 7; // Initialize y
+// console.log(x + y)
+
+// var x = 5; // Initialize x
+// console.log(x+y);
+// var y = 7; // Initialize y
+
