@@ -1712,6 +1712,47 @@ function biggerIsGreater(w) {
     return 'no answer'
 }
 
-biggerIsGreater('xildrrhpca');
+// biggerIsGreater('xildrrhpca');
+
+/*
+ * Complete the 'kaprekarNumbers' function below.
+ *
+ * The function accepts following parameters:
+ *  1. INTEGER p
+ *  2. INTEGER q
+ */
+
+// const range = (a, b) => a > b ? [] : [a, ...range(a + 1, b)];
+const range = (a,  b) => {
+    let arr = [];
+    for (a; a <= b; a++) {
+        arr.push(a)
+    }
+    return arr;
+};
+
+function kaprekarNumbers(p, q) {
+    // Write your code here
+    const res = []
+    for(let num of range(p, q)){
+        console.log(num)
+        let sqr = num*num;
+        let str_sqr = sqr.toString();
+        let d = num.toString().length;
+        let r = str_sqr.slice(-d);
+        let l = str_sqr.slice(undefined,-d) || '0';
+        if((parseInt(r) + parseInt(l)) === num){
+            res.push(num)
+        }
+    }
+
+    if(res.length === 0) {
+        console.log('INVALID RANGE')
+    } else {
+        console.log(res.join(' '))
+    }
+}
+
+kaprekarNumbers(1, 10000);
 
 
