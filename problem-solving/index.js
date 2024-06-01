@@ -1735,7 +1735,6 @@ function kaprekarNumbers(p, q) {
     // Write your code here
     const res = []
     for(let num of range(p, q)){
-        console.log(num)
         let sqr = num*num;
         let str_sqr = sqr.toString();
         let d = num.toString().length;
