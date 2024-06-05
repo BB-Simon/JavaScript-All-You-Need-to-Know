@@ -1779,4 +1779,62 @@ function beautifulTriplets(d, arr) {
 
 // console.log(beautifulTriplets(3, [1, 2, 4, 5, 7, 8, 10]))
 
+/*
+ * Complete the 'sockMerchant' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER_ARRAY ar
+ */
 
+function sockMerchant(n, ar) {
+    // Write your code here
+    const socks = {};
+    for(let item of ar){
+        socks[item] = socks[item] ? socks[item] += 1 : 1;
+    }
+    return Object.entries(socks).reduce((acc, item) => (acc += Math.floor(item[1] / 2)), 0);
+}
+
+// console.log(sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]))
+
+
+/*
+ * Complete the 'formingMagicSquare' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts 2D_INTEGER_ARRAY s as parameter.
+ */
+
+function formingMagicSquare(s) {
+    // Write your code here
+    const magicSquare = [[], [], []]
+    let coordinates = [0, 1]
+    const range = Array(9).fill(null).map((_, i) => (i + 1))
+    const thirdRow = 2
+    range.forEach(int => {
+        const y = coordinates[0]
+        const x = coordinates[1]
+        magicSquare[y][x] = int
+        const nextY = y === 0
+            ? coordinates[0] = thirdRow
+            : coordinates[0] = y - 1
+        const nextX = x === thirdRow
+            ? coordinates[1] = 0
+            : coordinates[1] = x + 1
+        if (magicSquare[nextY][nextX] > 0) {
+            coordinates[0] = y + 1
+            coordinates[1] = x
+        }
+    })
+    return magicSquare
+}
+
+const s = [
+    [4, 8,2],
+    [4, 5, 7],
+    [6, 1, 6],
+];
+
+console.log(formingMagicSquare(s));
