@@ -12,7 +12,7 @@ class BST {
   }
 
   /* 
-    Inser Operation algorithm
+    Insert Operation algorithm
     If node == Null
       node = CreateNode(data)
     If data < node->data
