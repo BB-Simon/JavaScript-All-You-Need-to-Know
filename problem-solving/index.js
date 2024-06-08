@@ -1837,4 +1837,27 @@ const s = [
     [6, 1, 6],
 ];
 
-console.log(formingMagicSquare(s));
+// console.log(formingMagicSquare(s));
+
+/*
+ * Complete the 'pickingNumbers' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY a as parameter.
+ */
+function pickingNumbers(a) {
+    // Write your code here
+    // max_subset = 0
+    // for num in a:
+    //     same = sum(map(lambda x: 1, filter(lambda x: x == num, a)))
+    //     below = sum(map(lambda x: 1, filter(lambda x: x == num - 1, a)))
+    //     above = sum(map(lambda x: 1, filter(lambda x: x == num + 1, a)))
+    //     max_subset = max(max_subset, same + below, same + above)
+    // return max_subset
+
+    a = a.sort((a, b) => a - b);
+    console.log(a)
+
+}
+
+console.log(pickingNumbers([1, 2, 2, 3, 1, 2]))
