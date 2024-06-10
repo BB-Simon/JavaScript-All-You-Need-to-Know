@@ -1860,4 +1860,29 @@ function pickingNumbers(a) {
 
 }
 
-console.log(pickingNumbers([1, 2, 2, 3, 1, 2]))
+// console.log(pickingNumbers([1, 2, 2, 3, 1, 2]))
+
+/*
+ * Complete the 'stones' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER a
+ *  3. INTEGER b
+ */
+
+function stones(n, a, b) {
+    // Write your code here 
+    const lastStones = [];
+    let i = n-1;
+    let j = 0;
+    while(i >= 0){
+        lastStones.push((a * i) + (b * j));
+        i-=1;
+        j+=1;
+    }
+    return [...new Set(lastStones)].sort((a, b) => a - b);
+}
+
+// stones(3, 1, 2);
