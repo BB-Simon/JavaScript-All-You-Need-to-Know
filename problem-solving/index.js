@@ -1886,3 +1886,57 @@ function stones(n, a, b) {
 }
 
 // stones(3, 1, 2);
+
+class Rectangle {
+    constructor(w, h) {
+        this.w = w;
+        this.h = h;
+    }
+}
+
+/*
+ *  Write code that adds an 'area' method to the Rectangle class' prototype
+ */
+
+
+Rectangle.prototype.area = function(){
+    return this.w * this.h
+}
+
+/*
+ * Create a Square class that inherits from Rectangle and implement its class constructor
+ */
+
+class Square extends Rectangle {
+    constructor(w, h) {
+        super(w, h)
+    }
+}
+
+// const sqr = new Square(4, 4);
+// console.log(sqr.area())
+
+function relativeSortArray(arr1, arr2) {
+    const res = [];
+    const res2 = []
+    for (let i of arr2) {
+        for (let j of arr1) {
+            if (i === j) {
+                res.push(j)
+            }
+        }
+    }
+
+    for (let i of arr1) {
+        if (!res.includes(i)) {
+            res2.push(i)
+        }
+    }
+
+    return res.concat(res2.sort((a, b) => a - b))
+
+};
+
+// const arr1 = [2, 3, 1, 3, 2, 4, 6, 4, 7, 9, 2, 19]
+// const arr2 = [2, 1, 4, 3, 9, 6]
+// relativeSortArray(arr1, arr2);
