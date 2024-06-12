@@ -12,6 +12,15 @@ class Graph {
 
   // Function to perform Breadth First Search 
   // on a graph represented using adjacency list
+
+//  BFS pseudocode
+//  `create a queue Q 
+//   mark v as visited and put v into Q 
+//   while Q is non-empty 
+//     remove the head u of Q 
+//     mark and enqueue all (unvisited) neighbours of u`
+
+
   bfs(startNode) {
     // Create a queue for BFS
     const queue = [];
@@ -24,6 +33,7 @@ class Graph {
     // Iterate over the queue
     while (queue.length !== 0) {
       // Dequeue a vertex from queue and print it
+      console.log({ visited: visited, queue: queue });
       const currentNode = queue.shift();
       console.log(currentNode + " ");
 
@@ -36,6 +46,8 @@ class Graph {
         }
       }
     }
+  
+
   }
 }
 
@@ -52,4 +64,4 @@ console.log({ graph: graph.adjList })
 
 // Perform BFS traversal starting from vertex 0
 console.log("Breadth First Traversal starting from vertex 0: ");
-graph.bfs(90);
+graph.bfs(0);

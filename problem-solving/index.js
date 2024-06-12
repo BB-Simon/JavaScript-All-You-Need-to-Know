@@ -1940,3 +1940,101 @@ function relativeSortArray(arr1, arr2) {
 // const arr1 = [2, 3, 1, 3, 2, 4, 6, 4, 7, 9, 2, 19]
 // const arr2 = [2, 1, 4, 3, 9, 6]
 // relativeSortArray(arr1, arr2);
+
+/*
+ * Complete the 'acmTeam' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts STRING_ARRAY topic as parameter.
+ */
+
+function acmTeam(topic) {
+    // Write your code here
+    // n = len(topic)
+    // d = {}
+    // for i in range(n - 1):
+    //     for j in range(i + 1, n):
+    //         ipos = [index for index, char in enumerate(topic[i]) if char == '1']
+    //         jpos = [index for index, char in enumerate(topic[j]) if char == '1']
+    //         tmp = len(set(ipos + jpos))
+    //         d[str(i) + str(j)] = tmp
+    // mv = max(d.values())
+    // mk = [key for key, value in d.items() if value == mv]
+    // return mv, len(mk)
+
+    const n = topic.length;
+    const d = {};
+
+    for(let i = 0; i < n; i++) {
+        for(let j = i; j < n; j++) {
+            
+        }
+    }
+
+}
+
+
+function twoSum(nums, target) {
+    let res = []
+
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = (i + 1); j < nums.length; j++) {
+            console.log(nums[j])
+            if ((nums[i] + nums[j]) === target) {
+                res.push(...[i, j]);
+                break
+            }
+        }
+    }
+    console.log(res)
+    return res;
+
+};
+
+// twoSum([2, 7, 11, 15], 9)
+
+function maxProfit(prices) {
+    let buyingPrice = prices[0];
+    let output = 0;
+    for (let i = 1; i < prices.length; i++) {
+        if (prices[i] < buyingPrice) {
+            buyingPrice = prices[i];
+        } else if ((prices[i] - buyingPrice) > output) {
+            output = prices[i] - buyingPrice;
+        }
+    }
+    return output;
+};
+
+// maxProfit([7, 1, 5, 3, 6, 4])
+
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var sortColors = function (nums) {
+    let low = 0  
+    let mid = 0 
+    let high = nums.length - 1;
+
+    while (mid <= high){
+        if (nums[mid] === 0){
+            let temp = nums[mid];
+            nums[mid] = nums[low];
+            nums[low] = temp;
+            low += 1
+            mid += 1
+        } else if (nums[mid] === 1) {
+            mid += 1
+        } else {
+            let temp = nums[mid];
+            nums[mid] = nums[high];
+            nums[high] = temp;
+            high -= 1
+        }
+    }
+    return nums
+
+};
+
+// console.log(sortColors([2, 0, 2, 1, 1, 0]))
