@@ -1974,40 +1974,6 @@ function acmTeam(topic) {
 }
 
 
-function twoSum(nums, target) {
-    let res = []
-
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = (i + 1); j < nums.length; j++) {
-            console.log(nums[j])
-            if ((nums[i] + nums[j]) === target) {
-                res.push(...[i, j]);
-                break
-            }
-        }
-    }
-    console.log(res)
-    return res;
-
-};
-
-// twoSum([2, 7, 11, 15], 9)
-
-function maxProfit(prices) {
-    let buyingPrice = prices[0];
-    let output = 0;
-    for (let i = 1; i < prices.length; i++) {
-        if (prices[i] < buyingPrice) {
-            buyingPrice = prices[i];
-        } else if ((prices[i] - buyingPrice) > output) {
-            output = prices[i] - buyingPrice;
-        }
-    }
-    return output;
-};
-
-// maxProfit([7, 1, 5, 3, 6, 4])
-
 /**
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
