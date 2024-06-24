@@ -1,0 +1,14 @@
+{
+  "name": "learn-js",
+  "version": "1.0.0",
+  "description": "Learning JavaScript and node.js",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.5"
+  }
+}
