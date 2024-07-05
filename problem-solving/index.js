@@ -2004,3 +2004,29 @@ var sortColors = function (nums) {
 };
 
 // console.log(sortColors([2, 0, 2, 1, 1, 0]))
+
+
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+var createCounter = function (init) {
+    let val = init;
+    return {
+        increment() {
+            return init += 1;
+        },
+        decrement() {
+            return val -= 1;
+        },
+        reset() {
+            return val;
+        }
+    }
+};
+
+
+const counter = createCounter(5)
+console.log(counter.increment()); // 6
+console.log(counter.reset()); // 6
+console.log(counter.decrement()); // 6
