@@ -661,3 +661,5 @@ doSomething(() => {
 // console.log(x+y);
 // var y = 7; // Initialize y
 
+const x = 10;
+console.log(x)
