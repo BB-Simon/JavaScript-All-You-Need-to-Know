@@ -1,84 +1,29 @@
-# Javascript all you need to know about!
-![JS Logo](./js.png "Logo")
---- 
-**Table of contents**
-[Table of Products with Prices](###Table-of-Products-with-Prices)
-[Code Examples](###Code-Examples)
+# JavaScript-All-You-Need-to-Know
 
-~~Hello Test~~
-to install all used packages run `npm install`
+![JavaScript Logo](js.png)
 
-**Simon**
-__Kabir__
-*Simon*
-_Kabir_
+A comprehensive guide to JavaScript, covering essential concepts, advanced topics, and problem-solving techniques. This repository includes in-depth resources for functional programming, object-oriented programming (OOP), data structures, algorithms, and numerous solved LeetCode problems.
 
-[Github](https://github.com/BB-Simon)
+## Table of Contents
+- [Overview](#overview)
+- [Installation](#installation)
+- [Directory Structure](#directory-structure)
+- [Features](#features)
+  - [JavaScript Fundamentals](#javascript-fundamentals)
+  - [Functional JavaScript](#functional-javascript)
+  - [Object-Oriented JavaScript](#object-oriented-javascript)
+  - [Data Structures and Algorithms](#data-structures-and-algorithms)
+  - [Problem Solving](#problem-solving)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-1. List1
-  1.1 sublist
-  1.2 sublist
-2. List2
-3. List3
+## Overview
+This repository is designed as a one-stop resource for mastering JavaScript, covering beginner to advanced topics, including essential ES6 features, programming paradigms, and coding challenges. It's a valuable reference for developers aiming to strengthen their JavaScript knowledge and problem-solving skills.
 
-* List1
-  * sublit
-  * sublist
-* List2
-* List3
-
-- List1
-  - sublit
-  - sublist
-- List2
-- List3
-### Table of Products with Prices
-
-| Name   | Item          | Price      
-|--------|:--------------|:--------|
-| Simon  | Apple         |     $34 |
-| Jimon  | Orange        |     $54 |
-| Takmina| Banana        |     $64 |
-| Souvo  | Cycle         |    $124 |
-
-### Code Examples
-
-```javascript
-/**
-@sayHi: do greating to the name will be passed as a arg
-@name: string
-**/
-function sayHi(name){
-  alert(`Hello ${name}, How are you today?`)
-}
-
-sayHi("Simon")
-```
----
-> there is a qout text loream40
-> test test test
->
-> -- <cite>Simon</cite>
-
-<details>
-  <summary>Header here</summary>
-
-  details of the block code will go here
-  - List1
-    - sublit
-    - sublist
-  - List2
-  - List3
-
-  ```javascript
-  /**
-  @sayHi: do greating to the name will be passed as a arg
-  @name: string
-  **/
-  function sayHi(name){
-    alert(`Hello ${name}, How are you today?`)
-  }
-
-  sayHi("Simon")
-  ```
-</details>
+## Installation
+Clone this repository and install dependencies:
+```bash
+git clone https://github.com/BB-Simon/JavaScript-All-You-Need-to-Know.git
+cd JavaScript-All-You-Need-to-Know
+npm install
