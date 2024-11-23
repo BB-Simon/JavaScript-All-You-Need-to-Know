@@ -311,12 +311,10 @@ var cat = myName(Animale, "Simon", "Jimon");
 
 // console.log(dog.printName());
 
-
-
 /********************************************************
-******* Studying Object In Microverse Training **********
-******* 11-01-2023 **********
-*********************************************************/
+ ******* Studying Object In Microverse Training **********
+ ******* 11-01-2023 **********
+ *********************************************************/
 
 // Create Object
 // const obj1 = {a: "A"}
@@ -342,32 +340,86 @@ var cat = myName(Animale, "Simon", "Jimon");
 
 // delay(3000).then(() => console.log('runs after 3 seconds'));
 
-
-
-
 const person = {
   name: "Simon",
   featurs: {
     test1: "test1",
     education: {
-      one: 'test',
+      one: "test",
       two: {
-        two: 'test2',
+        two: "test2",
         three: {
-          three: 'test3',
+          three: "test3",
           four: {
-            test4: 'test4',
-          }
-        }
-      }
-    }
+            test4: "test4",
+          },
+        },
+      },
+    },
+  },
+};
+
+const person2 = Object.assign({}, person);
+const person3 = Object.assign({}, person, {
+  featurs: "test without two",
+});
+// console.log('person2', person2);
+// console.log('person', person);
+
+class Programmer {
+  #languages;
+  constructor(name, languages) {
+    this.name = name;
+    this.#languages = languages;
+  }
+
+  #knownLanguages() {
+    return `expert in the following languages: ${this.#languages.join(", ")}`;
+  }
+
+  showLanguages() {
+    return this.#knownLanguages();
   }
 }
 
+class Simon extends Programmer {
+  constructor(name, languages, occupation, location) {
+    super(name, languages);
+    this.occupation = occupation;
+    this.location = location;
+  }
 
-const person2 = Object.assign({}, person)
-const person3 = Object.assign({}, person, {
-  featurs: 'test without two'
-})
-// console.log('person2', person2);
-// console.log('person', person);
+  introduce() {
+    console.log(
+      `Hi, I'm ${this.name}. I'm a ${this.occupation} living in ${
+        this.location
+      } and I am ${this.showLanguages()}.`
+    );
+  }
+
+  codeIn(frameworks) {
+    console.log(
+      `${this.name} is coding in the following frameworks: ${frameworks.join(
+        ", "
+      )}.`
+    );
+  }
+}
+
+const bbsimon = new Simon(
+  "BB Simon",
+  [
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Ruby",
+    "Ruby on Rails",
+    "Express.js",
+    "React.js",
+    "Next.js",
+  ],
+  "Software Engineer",
+  "Cairo, Egypt"
+);
+bbsimon.introduce();
+bbsimon.codeIn(["React.js", "Next.js", "Express.js", "Rails"]);
