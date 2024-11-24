@@ -633,10 +633,8 @@ let people = [
   { name: "Max", age: 20 },
   { name: "Jane", age: 20 },
 ];
-function groupBy(objectArray, property) {
-      
-}
-let groupedPeople = groupBy(people, 'age')
+function groupBy(objectArray, property) {}
+let groupedPeople = groupBy(people, "age");
 // console.log(groupedPeople);
 
 // ****************Title Case a Sentence**************
@@ -859,31 +857,28 @@ let groupedPeople = groupBy(people, 'age')
 // }
 // printChildrenRecursive(parent);
 
-
 // ........... Map and WeakMap.................
 
 const myMap = new Map();
 
-myMap.set('isMaried', true);
-myMap.set('info', {name: "Simon", age: 31});
+myMap.set("isMaried", true);
+myMap.set("info", { name: "Simon", age: 31 });
 
 // console.log({map: myMap.get('isMaried')})
 // console.log({map: myMap.get('info')})
 
-
 const x = 12;
-const y = {z: 15};
+const y = { z: 15 };
 
-function findXy (n1, n2){
+function findXy(n1, n2) {
   n1 = 20;
   n2.z = 25;
-  return {n1, n2};
+  return { n1, n2 };
 }
 
 // console.log({fn: findXy(x, y), x, y})
 
 // console.log(this)
-
 
 function* fibinacci() {
   let prev = 0;
@@ -892,7 +887,7 @@ function* fibinacci() {
   yield prev;
   yield next;
 
-  while(true) {
+  while (true) {
     const newValue = prev + next;
     yield newValue;
 
@@ -906,7 +901,6 @@ const fib = fibinacci();
 // for(var i = 0; i <= 8; i++){
 //   console.log(fib.next().value);
 // }
-
 
 // function createUser (name, age) {
 //   const obj = {};
@@ -939,33 +933,34 @@ const fib = fibinacci();
 
 // Object.assign(User.prototype, newPrototype);
 
-
- class Person {
-  constructor(name){
-    this.name = name
+class Person {
+  constructor(name) {
+    this.name = name;
   }
-  introduceSelf(){
-    console.log(`Hello, My name is ${this.name}`)
+  introduceSelf() {
+    console.log(`Hello, My name is ${this.name}`);
   }
- }
+}
 
 //  const simon = new Person();
 
- class Professor extends Person {
-  constructor(name, teaches){
+class Professor extends Person {
+  constructor(name, teaches) {
     super(name);
     this.teaches = teaches;
   }
 
-  introduceSelf(){
-    console.log(`Hello, I am professor ${this.name}, I will be teaching you ${this.teaches} subject`);
+  introduceSelf() {
+    console.log(
+      `Hello, I am professor ${this.name}, I will be teaching you ${this.teaches} subject`
+    );
   }
 
-  grade(){
+  grade() {
     const grade = Math.floor(Math.random() * 100);
-    console.log(grade)
+    console.log(grade);
   }
- }
+}
 
 //  const simon = new Professor('Simon', 'Math');
 //  simon.introduceSelf();
@@ -974,23 +969,29 @@ const fib = fibinacci();
 class Student extends Person {
   #year;
 
-  constructor(name, year){
-    super(name)
+  constructor(name, year) {
+    super(name);
     this.#year = year;
   }
 
   introduceSelf() {
-    const haveFriends = this.#hasFriends() ? 'I have friends' : 'I would like make some friends';
-    console.log(`Hello, I am ${this.name}, and i'm in year ${this.#year} and ${haveFriends}`);
+    const haveFriends = this.#hasFriends()
+      ? "I have friends"
+      : "I would like make some friends";
+    console.log(
+      `Hello, I am ${this.name}, and i'm in year ${
+        this.#year
+      } and ${haveFriends}`
+    );
   }
 
   #hasFriends() {
-    return this.#year.toLowerCase() === 'art';
+    return this.#year.toLowerCase() === "art";
   }
 }
 
-// const hasan = new Student('Hasan', 'Art');
-// hasan.introduceSelf();
+const hasan = new Student("Hasan", "Art");
+hasan.introduceSelf();
 
 // ****************asynchronous JavaScript
 // function makeGreet(name){
@@ -1009,7 +1010,6 @@ class Student extends Person {
 //   return n + 3;
 // }
 
-
 // function stepsResult () {
 //   let result = 0;
 //   result = step1(result);
@@ -1019,49 +1019,45 @@ class Student extends Person {
 //   return `result is ${result}`;
 // }
 
-function step1 (n, cb){
-  const res =  n + 1;
-  cb(res)
+function step1(n, cb) {
+  const res = n + 1;
+  cb(res);
 }
-function step2 (n, cb){
+function step2(n, cb) {
   const res = n + 2;
-  cb(res)
+  cb(res);
 }
-function step3 (n, cb){
+function step3(n, cb) {
   const res = n + 3;
-  cb(res)
+  cb(res);
 }
 
-
-function stepsResult () {
+function stepsResult() {
   step1(0, (res1) => {
     step2(res1, (res2) => {
       step3(res2, (res3) => {
-        console.log(`result is ${res3}`)
-      })
-    })
-  })
+        console.log(`result is ${res3}`);
+      });
+    });
+  });
 }
 
 // stepsResult();
 
-
-function sum(arr){
+function sum(arr) {
   if (arr.length === 0) {
     return 0;
   }
 
-  return arr[0] + sum(arr.slice(1))
+  return arr[0] + sum(arr.slice(1));
 }
 
 // console.log({ res: sum([2, 3, 4, 1]) })
 
 function exponential(num, power) {
-
   if (power === 1) {
     return num;
-  }
-  else {
+  } else {
     return num * exponential(num, power - 1);
   }
 }
@@ -1092,7 +1088,6 @@ function exponential(num, power) {
 // end
 // end
 
-
 /*
  * Complete the 'migratoryBirds' function below.
  *
@@ -1104,13 +1099,13 @@ function migratoryBirds(arr) {
   // Write your code here
   const counts = {};
 
-  for(let id of arr){
+  for (let id of arr) {
     counts[id] = counts[id] ? counts[id] + 1 : 1;
   }
 
   const max = Object.entries(counts).sort((a, b) => b[1] - a[1]);
 
-  return max[0][0]
+  return max[0][0];
 }
 
 // [1, 4, 4, 4, 5, 3]
