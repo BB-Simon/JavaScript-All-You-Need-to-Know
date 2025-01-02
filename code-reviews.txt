@@ -1,0 +1,31 @@
+3. You are leading the development of a new feature for a SaaS application. During code reviews, 
+you notice inconsistencies in the use of design patterns and accessibility practices across
+the codebase. 
+
+How would you ensure that your team adheres to frontend development standards, 
+including accessibility, performance optimization, and maintainable code structures?
+
+Ensuring adherence to frontend development standards requires a structured approach combining education, tools, 
+and processes. 
+Here's how I would address the situation:
+
+1. Establish a Frontend Guidelines Document
+* Design pattern best practices
+* Accessibility requirements (e.g., WCAG 2.1 compliance, semantic HTML usage).
+* Performance optimization techniques  (e.g., lazy loading, code splitting).
+* Naming conventions
+* Component design standards.
+
+2.  Implement automate Code Quality Checks:
+* Integrate ESLint with custom rules to enforce coding standards
+* Use Prettier for consistent code formatting
+* Use pre-commit code formatting using Husky with Prettier
+* Implement accessibility linting tools like:
+  eslint-plugin-jsx-a11y for React applications
+* Configure TypeScript with strict type checking to catch potential issues early
+* Automated accessibility checkers in CI/CD pipelines
+* Set up performance auditing tools like Lighthouse in the build process
+
+3. Provide Training and Resources: like Educate the Team, Pair Programming and Mentorship
+4. Improve the Code Review Process, like: Create a Review Checklist => mention microverse
+5.  Refactor and Maintain the Codebase

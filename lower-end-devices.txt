@@ -1,0 +1,30 @@
+4. Your product team has provided a detailed design for a new onboarding flow aimed at improving 
+user retention for your SaaS platform. However, during implementation, you discover that some 
+of the animations and layouts in the design affect performance on lower-end devices.
+
+How would you adapt the implementation to preserve the core design intent while ensuring a 
+seamless experience across all devices?
+
+1. Assess the Performance Bottlenecks
+* Identify Problematic Elements: Use performance profiling tools (e.g., Chrome DevTools) 
+to pinpoint which animations and layouts are causing issues.
+* Determine Impact: Quantify the performance hit, especially on lower-end devices, 
+to understand the scope of the problem.
+
+2. Prioritize Core Design Intent
+* Clarify Design Goals: Engage with the product and design teams to identify the non-negotiable elements that 
+embody the core user experience.
+* Define Secondary Features: Determine which animations or layout details can be simplified or replaced 
+without compromising the design intent.
+
+3. Optimize Animations
+* Use GPU-Friendly Animations: Stick to transforms (e.g., translate, scale, rotate) and opacity changes, 
+which are easier on the GPU.
+* Reduce Animation Complexity: Avoid heavy keyframe animations or ones that require recalculating layouts 
+(e.g., width, height).
+* Use CSS Transitions: For subtle, smooth effects that perform well.
+
+4. Simplify Layouts
+Minimize DOM Complexity: Reduce the number of nested elements and layers in the layout.
+Use Responsive Techniques: Implement simpler layouts for smaller screens or lower-performance devices.
+Lazy Load Elements: Load animations and assets only when needed.

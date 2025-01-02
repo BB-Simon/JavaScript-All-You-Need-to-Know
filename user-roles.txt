@@ -1,0 +1,40 @@
+6. Your SaaS application’s frontend requires integration with a new backend API for managing user roles
+and permissions. The API is still under development, and its structure and response times are inconsistent. 
+
+How would you handle this integration to minimize disruptions to the frontend while collaborating 
+with the backend team to resolve these issues?
+
+##Key Integration Strategies
+  3. Fallback Roles: Define default roles to ensure basic functionality
+    Use skeleton loaders during API calls
+    Implement optimistic UI updates
+    Provide clear error messages to users
+    Gracefully handle scenarios where role/permission data is unavailable
+    
+  1. Caching Mechanism: Implement an in-memory cache to reduce API calls and 
+  provide fallback data
+
+  2. Retry Logic: Add exponential backoff for handling transient network issues
+  
+  4. Error Handling: Comprehensive error logging and graceful degradation
+
+
+## Collaboration with Backend Team
+API Contract Documentation
+Work closely with backend team to define a clear, stable API contract
+Use TypeScript interfaces to enforce type safety
+Create comprehensive documentation for expected request/response structures
+
+## Frontend Resilience Patterns
+
+
+## Monitoring and Observability
+Implement detailed error logging
+Add performance tracking for API calls
+Set up alerts for consistent failures or performance degradation
+
+
+## Performance Optimization
+Minimize unnecessary API calls
+Implement intelligent caching strategies
+Use background refresh for cached data

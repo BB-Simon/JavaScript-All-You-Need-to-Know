@@ -1,0 +1,30 @@
+1. Tell us a little about yourself and how your previous experiences aligns with this role?
+
+Hello, my name is Badare Basem, I am a full-stack software developer with 3 plus years of experience 
+specializing in using JavaScript, React, Redux, Node, Express, and Rails to build software solutions.
+
+My last remote job was at Teachbuysell, which helps early-stage businesses with tech and marketing 
+solutions as a React and Node full-stack developer, where I was leading a team of 4 software engineers, 
+I had to architect the system of the software and manage and implement the complex features of the project 
+and deal with the QA team and client.
+
+I have worked at Pickled Agency and esely as remote software developer.
+
+I have been working for 5 years at Upwork Freelancer Marketplace as a remote software developer, 
+where I have contributed thousands of hours to many projects and teams emphasizing scalable code using 
+React, Node, Express, and MongoDB.
+
+at 2023 July I graduated from Microverse, a remote software development school that trains talented devs 
+from all over the world in a pair-programing and collaborative environment. I've spent the one year completely
+immersed in remote development, building everything from landing pages to Rails APIs.
+
+I started my journey to code at the fabruary of 2017, At That time I switched between several programming 
+languages like C, Java, Python, and PHP to learn the fundamentals of programming.
+
+I experienced an intense, fast-paced environment when I began my career as a customer service executive, 
+That time my company was using CRM as a Saas.
+
+
+
+
+

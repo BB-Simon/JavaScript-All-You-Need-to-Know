@@ -1,0 +1,52 @@
+5. Your SaaS platform uses a design system to maintain consistency across its interface. 
+You’re tasked with creating a reusable date-picker component that supports multiple date formats, 
+time zones, and custom styling options. 
+
+How would you approach building this component to ensure it is scalable, accessible, and easy 
+to integrate with existing applications?
+
+1. Requirements Analysis
+* Date Formats: Support multiple formats (e.g., YYYY-MM-DD, MM/DD/YYYY).
+* Time Zones: Handle user-specified or system-detected time zones.
+* Custom Styling: Allow theme overrides and component-level styling.
+* Accessibility: Adhere to WAI-ARIA guidelines.
+* Scalability: Ensure the component is modular and extendable for future features like 
+  calender, range selection.
+* Integration: Easy to plug into any project using the design system.
+
+2. technical/Design Decisions
+* Framework: Use react.js.
+* Base Libraries:
+  Use date-fns or Day.js for date manipulation.
+  Optionally, integrate Intl.DateTimeFormat for internationalization.
+* Styling:
+  Use CSS-in-JS solutions like Emotion or Styled Components for theme support.
+  Expose a className or style prop for custom styles.
+
+*Configuration Options:
+  Props for format, timeZone, minDate, maxDate, and disabledDates.
+  Support controlled and uncontrolled modes (value and defaultValue).
+
+4. Development Process
+  a. Setup and Configuration
+    Create a TypeScript-based component for better type safety.
+    Set up a story in Storybook to demonstrate variations and test edge cases.
+  b. Input Field
+    Accept a user-provided placeholder or auto-generate based on the selected date format.
+    Show a clear button to reset the value.
+  c. Calendar Pop-up
+    Display a grid with weekdays, dates, and navigation controls.
+    Highlight the current date and selected date.
+    Allow multi-date selection (optional for scalability).
+  d. Time Zone Handling
+    Use the Intl API to detect and set the default time zone.
+    Provide a dropdown to switch time zones dynamically.
+  e. Styling
+    Use tokens from the design system (e.g., colors, spacing, typography).
+    Allow customization via theme context or props like styles or className.
+  f. Testing
+    Write unit tests for:
+    Date parsing and formatting.  
+    Boundary conditions like min/max dates.
+    End-to-end tests for user interactions (e.g., Cypress).
+    Accessibility testing using tools like Axe or Lighthouse.
